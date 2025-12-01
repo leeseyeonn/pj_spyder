@@ -118,18 +118,24 @@ main {
   /* 신상품 (솔라코어) */
 }
 main .row2 {
-  /*  display: grid;
-   grid-template-columns: 500px 1fr; */
+  display: flex;
+  gap: 40px;
+  padding: 0 160px;
 }
 main .row2 .banner_img {
+  flex: 0 0 30%;
+  max-width: 30%;
   border: 2px solid red;
   background: url(../images/row2_new_items/insta_09.jpg);
 }
-main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap {
-  border: 2px solid blue;
+main .row2 .new_item_wrap {
+  flex: 1;
+  min-width: 0;
+  max-width: 70%;
 }
-main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap .item_img {
-  width: fit-content;
+main .row2 .new_item_wrap #solarcore_all {
+  background-color: aqua;
+  width: 100%;
 }
 main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap .item_img img {
   width: 100%;
@@ -137,23 +143,274 @@ main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap .item_img im
 main {
   /* 콜렉숀 */
 }
+main .row3 {
+  padding: 0 160px;
+}
+main .row3 .collection_wrap .title_wrap {
+  padding: 80px 0;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 1600/122;
+  background-image: url(../images/row4_collection/collection_bg_01.png);
+}
+main .row3 .collection_wrap #collect_women {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+main .row3 .collection_wrap #collect_women .collect_women_wrap .collect_wrap .item_img img {
+  width: 100%;
+}
 main {
   /* 신발 제품 */
+}
+main .row4 {
+  padding-left: 160px;
+}
+main .row4 #shoes .shoes_wrap .shoes_item_wrap {
+  aspect-ratio: 3/4;
+}
+main .row4 #shoes .shoes_wrap .shoes_card1 {
+  background: url(../images/row3_running/ARCTIC_WIDOW.jpg);
+}
+main .row4 #shoes .shoes_wrap .shoes_card2 {
+  background-image: url(../images/row3_running/bwx.jpg);
+}
+main .row4 #shoes .shoes_wrap .shoes_card3 {
+  background-image: url(../images/row3_running/pni.jpg);
+}
+main .row4 #shoes .shoes_wrap .shoes_card4 {
+  background-image: url(../images/row3_running/speers-x.jpg);
+}
+main .row4 #shoes .shoes_wrap .shoes_card5 {
+  background-image: url(../images/row3_running/DELKI_LOW.jpg);
+}
+main .row4 #shoes .shoes_wrap .shoes_card6 {
+  background-image: url(../images/row3_running/insider.jpg);
 }
 main {
   /* 중간 배너 */
 }
+main .row5 {
+  background-image: url(../images/row5_middle_bnr/중간이벤트.jpg);
+  width: 100%;
+  aspect-ratio: 1920/150;
+}
 main {
   /* 룩북 */
+}
+main .row6 {
+  padding: 0 160px;
+  width: 100%;
+}
+main .row6 .look_book_wrap {
+  display: flex;
+  gap: 20px;
+}
+main .row6 .look_book_wrap .look_book_card {
+  flex: 0 0 calc((100% - 60px) / 4);
+}
+main .row6 .look_book_wrap .look_book_card .look_book_bg {
+  width: 100%;
+  display: block;
+  aspect-ratio: 385/590;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+main .row6 .look_book_wrap .look_book_card .lb01 {
+  background-image: url(../images/row6_lookbook/loobook_01.webp);
+}
+main .row6 .look_book_wrap .look_book_card .lb02 {
+  background-image: url(../images/row6_lookbook/lookbook_02.webp);
+}
+main .row6 .look_book_wrap .look_book_card .lb03 {
+  background-image: url(../images/row6_lookbook/lookbook_03.jpg);
+}
+main .row6 .look_book_wrap .look_book_card .lb04 {
+  background-image: url(../images/row6_lookbook/lookbook_04.jpg);
+}
+main .row6 .look_book_wrap .look_book_card .look_book_item_wrap .look_book_item {
+  display: flex;
+}
+main .row6 .look_book_wrap .look_book_card .look_book_item_wrap .look_book_item .look_book_item_img {
+  width: 80px;
+  height: 80px;
+}
+main .row6 .look_book_wrap .look_book_card .look_book_item_wrap .look_book_item .look_book_item_img img {
+  width: 100%;
 }
 main {
   /* 한화 이글스 */
 }
+main .row7 {
+  display: flex;
+  gap: 40px;
+  padding: 0 160px;
+}
+main .row7 .eagles_wrap {
+  flex: 1;
+  min-width: 0;
+  max-width: 70%;
+}
+main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .eagles_item {
+  width: 100%;
+  aspect-ratio: 230/300;
+  background-position: center;
+  background-size: cover;
+}
+main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .hh1 {
+  background-image: url(../images/row7_eagles/eagles_01.jpg);
+}
+main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .hh2 {
+  background-image: url(../images/row7_eagles/eagles_02.jpg);
+}
+main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .hh3 {
+  background-image: url(../images/row7_eagles/eagles_03.jpg);
+}
+main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .hh4 {
+  background-image: url(../images/row7_eagles/eagles_04.jpg);
+}
+main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .hh5 {
+  background-image: url(../images/row7_eagles/eagles_05.jpg);
+}
+main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .hh6 {
+  background-image: url(../images/row7_eagles/eagles_06.jpg);
+}
+main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .hh7 {
+  background-image: url(../images/row7_eagles/eagles_07.jpg);
+}
+main .row7 #eagles_bnr {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+main .row7 #eagles_bnr .eagles_img_wrap .eagles_img {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 420/587;
+}
+main .row7 #eagles_bnr .eagles_img_wrap .hh_bnr1 {
+  background-image: url(../images/row7_eagles/spyder_ealges_bnr_1.jpg);
+}
+main .row7 #eagles_bnr .eagles_img_wrap .hh_bnr2 {
+  background-image: url(../images/row7_eagles/spyder_ealges_bnr_2.jpg);
+}
+main .row7 #eagles_bnr .eagles_img_wrap .hh_bnr3 {
+  background-image: url(../images/row7_eagles/spyder_ealges_bnr_3.jpg);
+}
 main {
   /* 빅펀치 */
 }
+main .row8 {
+  background-image: url(../images/row8_bigpunch/빅펀치\ 편집02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  padding: 50px 160px;
+  gap: 40px;
+}
+main .row8 iframe {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+main .row8 .big_punch_wrap {
+  flex: 1;
+  min-width: 0;
+  max-width: 70%;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 420/587;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .bp1 {
+  background-image: url(../images/row8_bigpunch/big_punch_01.png);
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .bp2 {
+  background-image: url(../images/row8_bigpunch/big_punch_02.png);
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .bp3 {
+  background-image: url(../images/row8_bigpunch/big_punch_03.png);
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .bp4 {
+  background-image: url(../images/row8_bigpunch/big_punch_04.png);
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .bp5 {
+  background-image: url(../images/row8_bigpunch/big_punch_05.jpg);
+}
 main {
   /* 인스타그램 */
+}
+main .row9 {
+  padding: 0 160px;
+}
+main .row9 .inst_wrap {
+  width: 100%;
+}
+main .row9 .inst_wrap ul {
+  display: flex;
+  gap: 15px;
+}
+main .row9 .inst_wrap ul li .insta_frame {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .row9 .inst_wrap ul li {
+  aspect-ratio: 1/1;
+  flex: 0 0 calc((100% - 60px) / 5);
+}
+main .row9 .inst_wrap ul li img {
+  width: 100%;
+}
+main .row9 .inst_wrap ul:last-child {
+  margin-top: 15px;
+}
+main .row9 .inst_wrap .if1 {
+  background-image: url(../images/row9_insta/insta_01.jpg);
+}
+main .row9 .inst_wrap .if2 {
+  background-image: url(../images/row9_insta/insta_02.jpg);
+}
+main .row9 .inst_wrap .if3 {
+  background-image: url(../images/row9_insta/insta_03.jpg);
+}
+main .row9 .inst_wrap .if4 {
+  background-image: url(../images/row9_insta/insta_04.jpg);
+}
+main .row9 .inst_wrap .if5 {
+  background-image: url(../images/row9_insta/insta_05.jpg);
+}
+main .row9 .inst_wrap .if6 {
+  background-image: url(../images/row9_insta/insta_06.jpg);
+}
+main .row9 .inst_wrap .if7 {
+  background-image: url(../images/row9_insta/insta_07.jpg);
+}
+main .row9 .inst_wrap .if8 {
+  background-image: url(../images/row9_insta/insta_08.jpg);
+}
+main .row9 .inst_wrap .if9 {
+  background-image: url(../images/row9_insta/insta_09.jpg);
+}
+main .row9 .inst_wrap .if10 {
+  background-image: url(../images/row9_insta/insta_010.jpeg);
+}
+footer {
+  padding: 50px 160px 100px 160px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .ftr_right .sns {
+  display: flex;
+}
+footer .ftr_right .box3 {
+  display: flex;
 }
 
 /*# sourceMappingURL=main.css.map */

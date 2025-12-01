@@ -2,6 +2,7 @@
 
 const row1Bnr = new Swiper('#main_banner', { 
     loop:true,
+    
     pagination: {
         el: "#main_banner .swiper-pagination",
         type: "fraction",
@@ -16,7 +17,8 @@ const row1Bnr = new Swiper('#main_banner', {
 
 /* solorcore - all */
 const row2Bnr = new Swiper('#solarcore_all', { 
-    slidesPerView:5.8,
+    slidesPerView:3.8,
+    spaceBetween: 20,
     loop:true,
     navigation: {
         nextEl: "#solarcore_all .swiper-button-next",
@@ -29,7 +31,8 @@ const row2Bnr = new Swiper('#solarcore_all', {
 /* women */
 
 const row3Bnr = new Swiper('#collect_women', { 
-    /* slidesPerView:5.8, */
+    slidesPerView:5.3,
+    spaceBetween: 20,
     loop:true,
     navigation: {
         nextEl: "#collect_women .swiper-button-next",
@@ -40,8 +43,9 @@ const row3Bnr = new Swiper('#collect_women', {
 /* ------------------------------------- 신발 */
 
 const row4Bnr = new Swiper('#shoes', { 
-    /* slidesPerView:5.8, */
-    loop:true,
+    slidesPerView:4.2,
+    spaceBetween: 20,
+    /* loop:true, */
     navigation: {
         nextEl: "#shoes .swiper-button-next",
         prevEl: "#shoes .swiper-button-prev",
@@ -53,7 +57,8 @@ const row4Bnr = new Swiper('#shoes', {
 /* 상품 슬라이드 */
 
 const row7List = new Swiper('#eagles_list', { 
-    /* slidesPerView:5.8, */
+    slidesPerView:3.8,
+    spaceBetween: 20,
     loop:true,
     navigation: {
         nextEl: "#eagles_list .swiper-button-next",
@@ -64,8 +69,8 @@ const row7List = new Swiper('#eagles_list', {
 
 /* 공지배너 */
 const row7Bnr = new Swiper('#eagles_bnr', { 
-    /* slidesPerView:5.8, */
     loop:true,
+    
     pagination: {
         el: "#eagles_bnr .swiper-pagination",
     },
@@ -79,7 +84,8 @@ const row7Bnr = new Swiper('#eagles_bnr', {
 /* ------------------------------------- 빅펀치 */
 
 const row8List = new Swiper('#big_punch_list', { 
-    /* slidesPerView:5.8, */
+    slidesPerView:3.8,
+    spaceBetween: 20,
     loop:true,
     navigation: {
         nextEl: "#big_punch_list .swiper-button-next",

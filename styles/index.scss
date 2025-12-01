@@ -161,45 +161,75 @@ main {
         }
     }
     /* 신상품 (솔라코어) */
-    .row2 {
-       /*  display: grid;
-        grid-template-columns: 500px 1fr; */
-        .banner_img {
-            @include check1;
-            background: url(../images/row2_new_items/insta_09.jpg);
-            h4 {}
-            p {}
-            .shop_btn {}
-        }
-        .new_item_wrap {
-           
-            .title_wrap {}
-            #solarcore_all {
-                .solarcore_wrap {
-                    .item_wrap {
-                        @include check2;
-                        .item_img {
-                            width: fit-content;
-                            img {width: 100%;}
-                        }
+                .row2 {
+                    display: flex;
+                    gap: 40px;
+                    padding: 0 160px;
+        
+                    .banner_img {
+                        flex: 0 0 30%;
+                        max-width: 30%;
+                        @include check1;
+                        background: url(../images/row2_new_items/insta_09.jpg);
+        
+                        h4 {}
+        
+                        p {}
+        
+                        .shop_btn {}
                     }
-                    .item_name {}
-                    .price_color {
-                        .item_price {}
-                        .item_color {
-                            .item_color_01 {}
-                            .item_color_02 {}
+        
+                    .new_item_wrap {
+                        flex: 1;
+                        min-width: 0;
+                        max-width: 70%;
+        
+                        .title_wrap {}
+        
+                        #solarcore_all {
+                            background-color: aqua;
+                            width: 100%;
+        
+                            .solarcore_wrap {
+                                .item_wrap {
+        
+                                    .item_img {
+        
+                                        img {
+                                            width: 100%;
+        
+                                        }
+                                    }
+        
+                                    .item_name {}
+        
+                                    .price_color {
+                                        .item_price {}
+        
+                                        .item_color {
+                                            .item_color_01 {}
+        
+                                            .item_color_02 {}
+                                        }
+                                    }
+                                }
+        
+                            }
                         }
                     }
                 }
-            }
-        }
-    }
     /* 콜렉숀 */
     .row3 {
+        padding: 0 160px;
         .collection_wrap {
             h3 {}
             .title_wrap {
+                padding: 80px 0;
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                aspect-ratio:1600 / 122;
+                background-image: url(../images/row4_collection/collection_bg_01.png);
                 .collection_name {
                     span {}
                     p {}
@@ -209,10 +239,14 @@ main {
                 }
             }
             #collect_women {
+                flex: 1;
+                        min-width: 0;
+                        max-width: 100%;
                 .collect_women_wrap {
                     .collect_wrap {
+                        
                         .item_img {
-                            img {}
+                            img {width: 100%;}
                         }
                         .item_name {}
                         .price_color {
@@ -229,42 +263,102 @@ main {
     }
     /* 신발 제품 */
     .row4 {
+        padding-left: 160px;
         h3 {}
         #shoes {
             .shoes_wrap {
                 .shoes_item_wrap {
+                    aspect-ratio: 3 / 4;
+                    
                     span {}
                     .shoes_name_wrap {
                         p {}
                         img {}
                     }
                 }
+                .shoes_card1 {
+                    background: url(../images/row3_running/ARCTIC_WIDOW.jpg);
+                }
+                .shoes_card2 {
+                    background-image: url(../images/row3_running/bwx.jpg);
+                }
+                .shoes_card3 {
+                    background-image: url(../images/row3_running/pni.jpg);
+                }
+                .shoes_card4 {
+                    background-image: url(../images/row3_running/speers-x.jpg);
+                }
+                .shoes_card5 {
+                    background-image: url(../images/row3_running/DELKI_LOW.jpg);
+                }
+                .shoes_card6 {
+                    background-image: url(../images/row3_running/insider.jpg);
+                }
             }
         }
     }
     /* 중간 배너 */
-    .row5 {}
+    .row5 {
+        background-image: url(../images/row5_middle_bnr/중간이벤트.jpg);
+        width: 100%;
+        aspect-ratio: 1920/150;
+    }
 
     /* 룩북 */
     .row6 {
+        padding: 0 160px;
+        width: 100%;
         h3 {}
         .look_book_wrap {
+            display: flex;
+            gap: 20px;
             .look_book_card {
+                 flex: 0 0 calc((100% - 20px * 3) / 4);
                 .look_book_bg {
+                     width: 100%;
+                     display: block;
+                    aspect-ratio: 385 / 590;
+                    background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;  // ★ 원본 비율 제각각이어도 꽉 채우기
                     .main_title {}
                     .sub_title {
                         p {}
                         .look_book_btn {}
                     }
                 }
-                .look_book_item_wrap {}
+                .lb01 {
+                    
+                    background-image:url(../images/row6_lookbook/loobook_01.webp);}
+                .lb02 {background-image: url(../images/row6_lookbook/lookbook_02.webp);}
+                .lb03 {background-image: url(../images/row6_lookbook/lookbook_03.jpg);}
+                .lb04 {background-image: url(../images/row6_lookbook/lookbook_04.jpg);}
+                .look_book_item_wrap {
+                    .look_book_item {
+                        display: flex;
+                        .look_book_item_img {
+                            width: 80px; height: 80px;
+                            img {width: 100%;}
+                        }
+                        .look_book_item_name {
+                            p{}
+                        }
+                    }
+                }
             }
+            
         }
     }
 
     /* 한화 이글스 */
     .row7 {
+        display: flex;
+        gap: 40px;
+        padding: 0 160px;
         .eagles_wrap {
+            flex: 1;
+                        min-width: 0;
+                        max-width: 70%;
             .title_wrap {
                 h3 {}
                 p {}
@@ -273,6 +367,10 @@ main {
             #eagles_list {
                 .eagles_list_wrap {
                     .eagles_item {
+                        width: 100%;
+                        aspect-ratio: 230 / 300;
+                        background-position: center;
+                        background-size: cover;
                         .item_info {
                             p {}
                             .price_wrap {
@@ -280,6 +378,13 @@ main {
                             }
                         }
                     }
+                    .hh1 {background-image: url(../images/row7_eagles/eagles_01.jpg);}
+                    .hh2 {background-image: url(../images/row7_eagles/eagles_02.jpg);}
+                    .hh3 {background-image: url(../images/row7_eagles/eagles_03.jpg);}
+                    .hh4 {background-image: url(../images/row7_eagles/eagles_04.jpg);}
+                    .hh5 {background-image: url(../images/row7_eagles/eagles_05.jpg);}
+                    .hh6 {background-image: url(../images/row7_eagles/eagles_06.jpg);}
+                    .hh7 {background-image: url(../images/row7_eagles/eagles_07.jpg);}
                 }
                 .row7_pr_btn {}
                 .row7_ne_btn {}
@@ -287,8 +392,18 @@ main {
             }
         }
         #eagles_bnr {
+            flex: 0 0 30%;
+            max-width: 30%;
             .eagles_img_wrap {
-                .eagles_img {}
+                .eagles_img {
+                    background-position: center;
+                        background-size: cover;
+                        width: 100%;
+                        aspect-ratio: 420 / 587;
+                }
+                .hh_bnr1 {background-image: url(../images/row7_eagles/spyder_ealges_bnr_1.jpg);}
+                .hh_bnr2 {background-image: url(../images/row7_eagles/spyder_ealges_bnr_2.jpg);}
+                .hh_bnr3 {background-image: url(../images/row7_eagles/spyder_ealges_bnr_3.jpg);}
             }
             .swiper-pagination {}
             .swiper-button-prev {}
@@ -297,8 +412,21 @@ main {
     }
     /* 빅펀치 */
     .row8 {
-        iframe {}
+        background-image: url(../images/row8_bigpunch/빅펀치\ 편집02.jpg);
+        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+        display: flex;
+        padding: 50px 160px;
+        gap:40px;
+        iframe {
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
         .big_punch_wrap {
+            flex: 1;
+                        min-width: 0;
+                        max-width: 70%;
             .title_wrap {
                 h3 {}
                 p {}
@@ -307,6 +435,11 @@ main {
             #big_punch_list {
                 .big_punch_list_wrap {
                     .big_punch_item {
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        width: 100%;
+                        aspect-ratio: 420 / 587;
                         .item_info {
                             p {}
                             .price_wrap {
@@ -317,6 +450,11 @@ main {
                             }
                         }
                     }
+                    .bp1 {background-image: url(../images/row8_bigpunch/big_punch_01.png);}
+                    .bp2 {background-image: url(../images/row8_bigpunch/big_punch_02.png);}
+                    .bp3 {background-image: url(../images/row8_bigpunch/big_punch_03.png);}
+                    .bp4 {background-image: url(../images/row8_bigpunch/big_punch_04.png);}
+                    .bp5 {background-image: url(../images/row8_bigpunch/big_punch_05.jpg);}
                 }
                 .swiper-pagination {}
                 .swiper-button-prev {}
@@ -327,14 +465,42 @@ main {
 
     /* 인스타그램 */
     .row9 {
+        padding: 0 160px;
         .title_wrap {
             h3 {}
             p {}
         }
         .inst_wrap {
+            width: 100%;
             ul {
-                li {}
+                display: flex;
+                gap: 15px;
+                li {
+                    .insta_frame {
+                        background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    }
+                    aspect-ratio: 1/1;
+                    flex: 0 0 calc((100% - 15px * 4 ) / 5); 
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
             }
+            ul:last-child {margin-top: 15px;}
+            .if1 {background-image: url(../images/row9_insta/insta_01.jpg);}
+            .if2 {background-image: url(../images/row9_insta/insta_02.jpg);}
+            .if3 {background-image: url(../images/row9_insta/insta_03.jpg);}
+            .if4 {background-image: url(../images/row9_insta/insta_04.jpg);}
+            .if5 {background-image: url(../images/row9_insta/insta_05.jpg);}
+            .if6 {background-image: url(../images/row9_insta/insta_06.jpg);}
+            .if7 {background-image: url(../images/row9_insta/insta_07.jpg);}
+            .if8 {background-image: url(../images/row9_insta/insta_08.jpg);}
+            .if9 {background-image: url(../images/row9_insta/insta_09.jpg);}
+            .if10 {background-image: url(../images/row9_insta/insta_010.jpeg);}
+
         }
         .insta_btn {}
     }
@@ -342,6 +508,9 @@ main {
 
 
 footer {
+    padding: 50px 160px 100px 160px;
+    display: flex;
+    justify-content: space-between;
     .ftr_left {
         .store_btn {}
         ul {
@@ -352,6 +521,7 @@ footer {
     }
     .ftr_right {
         .sns {
+            display: flex;
             li {
                 img {}
             }
@@ -360,6 +530,7 @@ footer {
             p {}
         }
         .box3 {
+            display: flex;
             ul {
                 li {}
             }
