@@ -1,1 +1,368 @@
 @use './common.scss' as *;
+
+/* -------------------------- 헤더 */
+
+header {
+    .header_bg_warp {
+        width: 100%;
+        padding: 45px 160px 20px 160px;
+        mix-blend-mode: multiply;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    }
+
+    h1 {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .hdr_menu {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 35px;
+
+        .hdr_etc {
+            display: flex;
+            justify-content: space-between;
+
+            .hdr_ect_left,
+            .hdr_ect_right {
+                display: flex;
+                gap: 20px;
+
+                p {
+                    font-size: $font-14;
+                    color: #fff;
+                }
+            }
+
+        }
+
+        .nav_wrap {
+            display: flex;
+            justify-content: space-between;
+
+            .none_box {
+                width: 92px;
+                height: 25px;
+            }
+
+            nav {
+                .main_menu_wrap {
+                    display: flex;
+                    gap: 40px;
+
+                    .main_menu {
+                        color: #fff;
+                        font-weight: 500;
+                        display: flex;
+                        flex-flow: column nowrap;
+
+                        .sub_menu_wrap {
+                            display: none;
+
+                            .sub_menu {
+                                color: blue;
+
+                                .sub_menu_detail {
+                                    @include check1;
+
+                                    li {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hdr_serv {
+                display: flex;
+                gap: 15px;
+
+                li {
+                    img {}
+                }
+            }
+        }
+
+    }
+}
+
+main {
+    background-color: beige;
+    section {
+        width: 100%;
+        h3 {}
+        button {}
+        /* 기본 상품 정렬 */
+        .item_wrap {
+            .item_img {
+                img {}
+            }
+            .item_name {}
+            .price_color {
+                .item_price {}
+                .item_color {
+                    .item_color_01 {}
+                    .item_color_02 {}
+                }
+            }
+        }
+    }
+    /* 메인 배너 */
+    .row1 {
+        #main_banner {
+            height: 90vh;
+            .main_banner_wrap {
+                .bannr_img {
+                    h2 {
+                        font-size:$font-45;
+                        color:#fff;
+                        font-weight: $font-sb;
+                    }
+                    p {
+                        margin: 15px 0;
+                        color:#fff;
+                        font-weight:$font-m;
+                        font-size:$font-24;
+                    }
+                    .bnr_btn {
+                        @include btn-style-w;
+                    }
+                }
+                .bannr_img_001 {
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    background:url(../images/row1_main_bnr/main_bnr_001.jpg)
+                }
+                .bannr_img_002 {
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    background:url(../images/row1_main_bnr/main_bnr_002.jpg)
+                }
+                .bannr_img_003 {
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    background:url(../images/row1_main_bnr/main_bnr_003.jpg)
+                }
+            }
+            .row1_pg {}
+            .row1_pr_btn{}
+            .row1_ne_btn{}
+            .row1_scroll {}
+        }
+    }
+    /* 신상품 (솔라코어) */
+    .row2 {
+       /*  display: grid;
+        grid-template-columns: 500px 1fr; */
+        .banner_img {
+            @include check1;
+            background: url(../images/row2_new_items/insta_09.jpg);
+            h4 {}
+            p {}
+            .shop_btn {}
+        }
+        .new_item_wrap {
+           
+            .title_wrap {}
+            #solarcore_all {
+                .solarcore_wrap {
+                    .item_wrap {
+                        @include check2;
+                        .item_img {
+                            width: fit-content;
+                            img {width: 100%;}
+                        }
+                    }
+                    .item_name {}
+                    .price_color {
+                        .item_price {}
+                        .item_color {
+                            .item_color_01 {}
+                            .item_color_02 {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 콜렉숀 */
+    .row3 {
+        .collection_wrap {
+            h3 {}
+            .title_wrap {
+                .collection_name {
+                    span {}
+                    p {}
+                }
+                .cate_btn_wrap {
+                    .cate_btn {}
+                }
+            }
+            #collect_women {
+                .collect_women_wrap {
+                    .collect_wrap {
+                        .item_img {
+                            img {}
+                        }
+                        .item_name {}
+                        .price_color {
+                            .item_price {}
+                            .item_color {
+                                .item_color_01 {}
+                                .item_color_02 {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 신발 제품 */
+    .row4 {
+        h3 {}
+        #shoes {
+            .shoes_wrap {
+                .shoes_item_wrap {
+                    span {}
+                    .shoes_name_wrap {
+                        p {}
+                        img {}
+                    }
+                }
+            }
+        }
+    }
+    /* 중간 배너 */
+    .row5 {}
+
+    /* 룩북 */
+    .row6 {
+        h3 {}
+        .look_book_wrap {
+            .look_book_card {
+                .look_book_bg {
+                    .main_title {}
+                    .sub_title {
+                        p {}
+                        .look_book_btn {}
+                    }
+                }
+                .look_book_item_wrap {}
+            }
+        }
+    }
+
+    /* 한화 이글스 */
+    .row7 {
+        .eagles_wrap {
+            .title_wrap {
+                h3 {}
+                p {}
+                .shop_btn {}
+            }
+            #eagles_list {
+                .eagles_list_wrap {
+                    .eagles_item {
+                        .item_info {
+                            p {}
+                            .price_wrap {
+                                p {}
+                            }
+                        }
+                    }
+                }
+                .row7_pr_btn {}
+                .row7_ne_btn {}
+                .row7_scroll {}
+            }
+        }
+        #eagles_bnr {
+            .eagles_img_wrap {
+                .eagles_img {}
+            }
+            .swiper-pagination {}
+            .swiper-button-prev {}
+            .swiper-button-next {} 
+        }
+    }
+    /* 빅펀치 */
+    .row8 {
+        iframe {}
+        .big_punch_wrap {
+            .title_wrap {
+                h3 {}
+                p {}
+                .shop_btn {}
+            }
+            #big_punch_list {
+                .big_punch_list_wrap {
+                    .big_punch_item {
+                        .item_info {
+                            p {}
+                            .price_wrap {
+                                p {
+                                    span {}
+                                    del {}
+                                }
+                            }
+                        }
+                    }
+                }
+                .swiper-pagination {}
+                .swiper-button-prev {}
+                .swiper-button-next {} 
+            }
+        }
+    }
+
+    /* 인스타그램 */
+    .row9 {
+        .title_wrap {
+            h3 {}
+            p {}
+        }
+        .inst_wrap {
+            ul {
+                li {}
+            }
+        }
+        .insta_btn {}
+    }
+}
+
+
+footer {
+    .ftr_left {
+        .store_btn {}
+        ul {
+            li {
+                span {}
+            }
+        }
+    }
+    .ftr_right {
+        .sns {
+            li {
+                img {}
+            }
+        }
+        .notice {
+            p {}
+        }
+        .box3 {
+            ul {
+                li {}
+            }
+        }
+    }
+}

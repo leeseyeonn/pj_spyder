@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* -------------------------- 헤더 */
+header .header_bg_warp {
+  width: 100%;
+  padding: 45px 160px 20px 160px;
+  mix-blend-mode: multiply;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+header h1 {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header h1 img {
+  width: 80%;
+}
+header .hdr_menu {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 35px;
+}
+header .hdr_menu .hdr_etc {
+  display: flex;
+  justify-content: space-between;
+}
+header .hdr_menu .hdr_etc .hdr_ect_left,
+header .hdr_menu .hdr_etc .hdr_ect_right {
+  display: flex;
+  gap: 20px;
+}
+header .hdr_menu .hdr_etc .hdr_ect_left p,
+header .hdr_menu .hdr_etc .hdr_ect_right p {
+  font-size: 0.875rem;
+  color: #fff;
+}
+header .hdr_menu .nav_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+header .hdr_menu .nav_wrap .none_box {
+  width: 92px;
+  height: 25px;
+}
+header .hdr_menu .nav_wrap nav .main_menu_wrap {
+  display: flex;
+  gap: 40px;
+}
+header .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu {
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  flex-flow: column nowrap;
+}
+header .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu .sub_menu_wrap {
+  display: none;
+}
+header .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu .sub_menu_wrap .sub_menu {
+  color: blue;
+}
+header .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu .sub_menu_wrap .sub_menu .sub_menu_detail {
+  border: 2px solid red;
+}
+header .hdr_menu .nav_wrap .hdr_serv {
+  display: flex;
+  gap: 15px;
+}
+main {
+  background-color: beige;
+}
+main section {
+  width: 100%;
+}
+main section {
+  /* 기본 상품 정렬 */
+}
+main {
+  /* 메인 배너 */
+}
+main .row1 #main_banner {
+  height: 90vh;
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img h2 {
+  font-size: 2.813rem;
+  color: #fff;
+  font-weight: 600;
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img p {
+  margin: 15px 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img .bnr_btn {
+  padding: 10px 50px;
+  color: #fff;
+  border: 0.5px solid #fff;
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img_001 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background: url(../images/row1_main_bnr/main_bnr_001.jpg);
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img_002 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background: url(../images/row1_main_bnr/main_bnr_002.jpg);
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img_003 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background: url(../images/row1_main_bnr/main_bnr_003.jpg);
+}
+main {
+  /* 신상품 (솔라코어) */
+}
+main .row2 {
+  /*  display: grid;
+   grid-template-columns: 500px 1fr; */
+}
+main .row2 .banner_img {
+  border: 2px solid red;
+  background: url(../images/row2_new_items/insta_09.jpg);
+}
+main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap {
+  border: 2px solid blue;
+}
+main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap .item_img {
+  width: fit-content;
+}
+main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap .item_img img {
+  width: 100%;
+}
+main {
+  /* 콜렉숀 */
+}
+main {
+  /* 신발 제품 */
+}
+main {
+  /* 중간 배너 */
+}
+main {
+  /* 룩북 */
+}
+main {
+  /* 한화 이글스 */
+}
+main {
+  /* 빅펀치 */
+}
+main {
+  /* 인스타그램 */
+}
+
+/*# sourceMappingURL=main.css.map */
