@@ -5,7 +5,7 @@
 header {
     .header_bg_warp {
         width: 100%;
-        padding: 45px 160px 20px 160px;
+        padding: 45px  20px ;
         mix-blend-mode: multiply;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
     }
@@ -94,443 +94,1052 @@ header {
 }
 
 main {
-    background-color: beige;
+    /* background-color: beige; */
+    section:first-child {margin-bottom: 80px;}
     section {
+        .scr1 {
+            .item_color_01 {@include c-blue;}
+            .item_color_02 {@include c-black;}
+        }
+        .scr2 {
+            .item_color_01 {@include c-white;}
+            .item_color_02 {@include c-black;}
+        }
+        .scr3 {
+            .item_color_01 {@include c-beige;}
+            .item_color_02 {@include c-black;}
+        }
+        .scr4 {
+            .item_color_01 {@include c-grey;}
+            .item_color_02 {@include c-black;}
+        }
+        .scr5 {
+            .item_color_01 {@include c-white;}
+            .item_color_02 {@include c-black;}
+        }
+        .scr6 {
+            .item_color_01 {@include c-blue;}
+            .item_color_02 {@include c-black;}
+        }
+        .scr7 {
+            .item_color_01 {@include c-grey;}
+            .item_color_02 {@include c-black;}
+        }
+        /* 여성 콜렉션 */
+        .sc1 {
+            .item_color_01 {@include c-beige;}
+            .item_color_02 {@include c-black;}
+        }
+        .sc2 {
+            .item_color_01 {@include c-grey;}
+            .item_color_02 {@include c-black;}
+        }
+        .sc3 {
+            .item_color_01 {@include c-beige;}
+            .item_color_02 {@include c-brown;}
+        }
+        .sc4 {
+            .item_color_01 {@include c-beige;}
+            .item_color_02 {@include c-black;}
+        }
+        .sc5 {
+            .item_color_01 {@include c-purple;}
+            .item_color_02 {@include c-black;}
+        }
+        .sc6 {
+            .item_color_01 {@include c-beige;}
+            .item_color_02 {@include c-black;}
+        }
+        .item_img {
+            position: relative;
+            &::after {
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+            &:hover::after {
+                opacity: 1;
+                width:28px; height: 28px;
+                display: block; position: absolute;
+                bottom: 20px; right: 20px;
+                content: "";
+                background-image: url(../images/icon/add.svg);
+                @include bg-opt;
+            }
+            margin-bottom: 20px;
+            img {}
+        }
+
+
+
+
         width: 100%;
-        h3 {}
+        margin-bottom:120px;
+        h3 {font-size:$font-30; font-weight:$font-sb;}
+
         button {}
+
         /* 기본 상품 정렬 */
         .item_wrap {
-            .item_img {
-                img {}
+            
+
+            .item_name {
+                margin:10px 0;
+                font-weight: $font-m;
             }
-            .item_name {}
+
             .price_color {
-                .item_price {}
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+
+                .item_price {
+                    
+                    font-size: $font-18;
+                    font-weight: $font-sb;
+                }
+
                 .item_color {
+                    margin-top: 10px;
+                    display: flex;
+                    gap:5px;
                     .item_color_01 {}
+
                     .item_color_02 {}
                 }
             }
         }
     }
+
     /* 메인 배너 */
     .row1 {
         #main_banner {
             height: 90vh;
+
             .main_banner_wrap {
                 .bannr_img {
                     h2 {
-                        font-size:$font-45;
-                        color:#fff;
+                        font-size: $font-45;
+                        color: #fff;
                         font-weight: $font-sb;
                     }
+
                     p {
                         margin: 15px 0;
-                        color:#fff;
-                        font-weight:$font-m;
-                        font-size:$font-24;
+                        color: #fff;
+                        font-weight: $font-m;
+                        font-size: $font-24;
                     }
+
                     .bnr_btn {
                         @include btn-style-w;
                     }
                 }
+
                 .bannr_img_001 {
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                    background:url(../images/row1_main_bnr/main_bnr_001.jpg)
+                    @include bg-opt;
+                    background: url(../images/row1_main_bnr/main_bnr_001.jpg)
                 }
+
                 .bannr_img_002 {
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: contain;
-                    background:url(../images/row1_main_bnr/main_bnr_002.jpg)
+                    @include bg-opt;
+                    background: url(../images/row1_main_bnr/main_bnr_002.jpg)
                 }
+
                 .bannr_img_003 {
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                    background:url(../images/row1_main_bnr/main_bnr_003.jpg)
+                    @include bg-opt;
+                    background: url(../images/row1_main_bnr/main_bnr_003.jpg)
                 }
             }
+
             .row1_pg {}
-            .row1_pr_btn{}
-            .row1_ne_btn{}
+
+            .row1_pr_btn {}
+
+            .row1_ne_btn {}
+
             .row1_scroll {}
         }
     }
+
     /* 신상품 (솔라코어) */
-                .row2 {
+    .row2 {
+        display: flex;
+        gap: 40px;
+        padding: 0 120px;
+        align-items: flex-end;
+
+        .banner_img {
+            position: relative;
+            text-align: center;
+            aspect-ratio: 480 / 650;
+            flex: 0 0 30%;
+            max-width: 30%;
+            
+            background-image:url(../images/row2_new_items/insta_09.jpg);
+            @include bg-opt;
+
+            h4 {
+                position: absolute;
+                bottom: 20px; left: 50%;
+                @include center-a;
+                color:$color-white;
+                font-size: $font-24;
+                
+                span{
+                    font-size:$font-12;
+                    color:$color-white;
+                }
+            }
+
+            
+
+            
+        }
+
+        .new_item_wrap {
+            flex: 1;
+            min-width: 0;
+            max-width: 70%;
+            
+            
+
+            .title_wrap {
+                
+               
+                    h3 {margin-bottom: 10px;}
+                
+                .text_wrap {
+                    margin-bottom: 30px;
+                    
+                    align-items: center;}
+                .cate_btn_wrap {
                     display: flex;
-                    gap: 40px;
-                    padding: 0 160px;
-        
-                    .banner_img {
-                        flex: 0 0 30%;
-                        max-width: 30%;
-                        @include check1;
-                        background: url(../images/row2_new_items/insta_09.jpg);
-        
-                        h4 {}
-        
-                        p {}
-        
-                        .shop_btn {}
+                    gap: 15px;
+                    .cate_btn {
+                        font-size:$font-18;
+                        
+                        color:$color-gray-1;
                     }
-        
-                    .new_item_wrap {
-                        flex: 1;
-                        min-width: 0;
-                        max-width: 70%;
-        
-                        .title_wrap {}
-        
-                        #solarcore_all {
-                            background-color: aqua;
+                    .cate_btn.active {color:$color-black;}
+                }
+                .btn_wrap {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+                    
+                }
+                p {
+                    
+                }
+                .shop_btn {
+                    @include btn-style-b;
+                    
+                }
+            }
+            .solarcore_all_wrap {
+
+
+            }
+            #solarcore_all {
+                position: relative;
+                padding-bottom: 80px;
+                width: 100%;
+                .solarcore_wrap {
+                    .item_wrap {
+                        
+                        .item_img {
                             width: 100%;
-        
-                            .solarcore_wrap {
-                                .item_wrap {
-        
-                                    .item_img {
-        
-                                        img {
-                                            width: 100%;
-        
-                                        }
-                                    }
-        
-                                    .item_name {}
-        
-                                    .price_color {
-                                        .item_price {}
-        
-                                        .item_color {
-                                            .item_color_01 {}
-        
-                                            .item_color_02 {}
-                                        }
-                                    }
-                                }
-        
+                            aspect-ratio: 285/356;
+                            img {
+                                width: 100%;
+
+                            }
+                        }
+
+                        .item_name {}
+
+                        .price_color {
+                            .item_price {}
+
+                            .item_color {
+                                .item_color_01 {}
+
+                                .item_color_02 {}
                             }
                         }
                     }
+
                 }
-    /* 콜렉숀 */
-    .row3 {
-        padding: 0 160px;
-        .collection_wrap {
-            h3 {}
-            .title_wrap {
-                padding: 80px 0;
-                background-position: center;
-                background-size: cover;
-                width: 100%;
-                aspect-ratio:1600 / 122;
-                background-image: url(../images/row4_collection/collection_bg_01.png);
-                .collection_name {
-                    span {}
-                    p {}
-                }
-                .cate_btn_wrap {
-                    .cate_btn {}
+                
+                .swiper-button-prev,
+                    .swiper-button-next {
+                        top: calc(100% - 17px);
+                        position: absolute;
+                        border: 0.5px solid rgba($color: #b4b4b4, $alpha: 0.5);
+                        width: 34px; height: 34px;
+                        background: $color-white;
+                        svg {
+                            width: 70%; height: 70%;
+                            color:$color-black;
+                        }
+                    }
+                    .swiper-button-prev {left: calc(100% - 68px); bottom: 0;}
+                    .swiper-button-next {right: 0; bottom: 0;}
+                    
+                
+                .swiper-scrollbar {
+                    .swiper-scrollbar-drag {
+                        background:#999;
+                    }
+                    height: 2px; width: 93%;
+                    bottom:  17px; left: 0;
+
                 }
             }
+        }
+    }
+
+    /* 콜렉숀 */
+    .row3 {
+        padding: 0 120px;
+
+        .collection_wrap {
+            h3 {margin-bottom: 20px;}
+
+            .title_wrap {
+                margin-bottom: 20px;
+                text-align: center;
+                position: relative;
+                padding: 80px 0;
+                @include bg-opt;
+                width: 100%;
+                aspect-ratio: 1600 / 122;
+                background-image: url(../images/row4_collection/collection_bg_01.png);
+                &::after {
+                    mix-blend-mode: multiply;
+                    opacity: 0.4;
+                    width: 100%; height: 100%; 
+                    content: ""; display: block; 
+                    position: absolute; top:0; left: 0; 
+                    background:$color-black;
+                }
+                .collection_name {
+                    
+                    position: relative; z-index: 5;
+                    span {
+                        display: block;
+                        color:$color-white;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        color:$color-white;
+                        font-size:$font-30;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .cate_btn_wrap {
+                    
+                    position: relative; z-index: 5;
+                    .cate_btn {@include btn-style-w-c;
+                    margin-right: 20px;
+                    }
+                }
+                .cate_btn_wrap .cate_btn:last-child {margin: 0 !important;}
+            }
+
             #collect_women {
+                position: relative;
                 flex: 1;
-                        min-width: 0;
-                        max-width: 100%;
+                min-width: 0;
+                max-width: 100%;
+                padding-bottom: 74px;
                 .collect_women_wrap {
                     .collect_wrap {
-                        
+
                         .item_img {
-                            img {width: 100%;}
+                            img {
+                                width: 100%;
+                            }
                         }
+
                         .item_name {}
+
                         .price_color {
                             .item_price {}
+
                             .item_color {
                                 .item_color_01 {}
+
                                 .item_color_02 {}
                             }
                         }
                     }
                 }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    @include pr-ne;
+                    top: calc(100% - 17px);
+                    svg {@include svg-opt;}
+                }
+
+                .swiper-button-prev {@include pr-btn;}
+                .swiper-button-next {@include ne-btn;}
+                .swiper-scrollbar {
+                    .swiper-scrollbar-drag {
+                        background:#999;
+                    }
+                    height: 2px; width: 95%;
+                    bottom:  17px; left: 0;
+                }
             }
         }
     }
+
     /* 신발 제품 */
     .row4 {
-        padding-left: 160px;
-        h3 {}
+        padding-left:120px ;
+
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        
         #shoes {
+            
             .shoes_wrap {
+                
                 .shoes_item_wrap {
-                    aspect-ratio: 3 / 4;
                     
-                    span {}
+                    padding: 50px;
+                    aspect-ratio: 3 / 4;
+
+                    span {
+                        font-size: $font-18;
+                        font-weight: $font-m;
+                        margin-bottom: 15px;
+                        display: block;
+                    }
+
                     .shoes_name_wrap {
-                        p {}
-                        img {}
+                        display: flex;
+                        align-items: center;
+                        p {
+                            font-size: $font-24;
+                            font-weight: $font-sb;
+                        }
+
+                        img {
+                            transform: translateX(0);
+                            padding-top: 3px;
+                            display: block;
+                            transition: transform 0.3s ease;
+                        }
                     }
                 }
+
                 .shoes_card1 {
                     background: url(../images/row3_running/ARCTIC_WIDOW.jpg);
                 }
+
                 .shoes_card2 {
                     background-image: url(../images/row3_running/bwx.jpg);
                 }
+
                 .shoes_card3 {
                     background-image: url(../images/row3_running/pni.jpg);
                 }
+
                 .shoes_card4 {
                     background-image: url(../images/row3_running/speers-x.jpg);
                 }
+
                 .shoes_card5 {
                     background-image: url(../images/row3_running/DELKI_LOW.jpg);
                 }
+
                 .shoes_card6 {
                     background-image: url(../images/row3_running/insider.jpg);
                 }
             }
         }
     }
+
     /* 중간 배너 */
     .row5 {
-        background-image: url(../images/row5_middle_bnr/중간이벤트.jpg);
+        background-image: url(../images/row5_middle_bnr/middle_bnr.jpg);
         width: 100%;
         aspect-ratio: 1920/150;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 37px 30% 37px 25%;
+        .left {
+            margin-right: 80px;
+            p:first-child {
+                color:$color-white;
+                font-weight: $font-m;
+                font-size: $font-24;
+                margin-bottom: 10px;
+            }
+            p:last-child {
+                color:$color-white;
+                font-weight: $font-m;
+                font-size: $font-32;
+            }
+        }
+        .right {
+            text-align: right;
+            p:first-child {
+                color:$color-white;
+                /* font-weight: $font-m; */
+                opacity: 0.7;;
+                margin-bottom: 3px;
+            }
+            p:last-child {
+                color:$color-white;
+                font-weight: $font-m;
+                font-size: $font-32;
+                color:#E60012;
+            }
+        }
     }
 
     /* 룩북 */
     .row6 {
-        padding: 0 160px;
+        padding: 0 120px;
         width: 100%;
-        h3 {}
+
+        h3 {margin-bottom: 20px;}
+
         .look_book_wrap {
             display: flex;
             gap: 20px;
+
             .look_book_card {
-                 flex: 0 0 calc((100% - 20px * 3) / 4);
+                flex: 0 0 calc((100% - 20px * 3) / 4);
+
                 .look_book_bg {
-                     width: 100%;
-                     display: block;
+                    margin-bottom: 15px;
+                    position: relative;
+                    width: 100%;
+                    display: block;
                     aspect-ratio: 385 / 590;
-                    background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;  // ★ 원본 비율 제각각이어도 꽉 채우기
-                    .main_title {}
+                    @include bg-opt;
+                    &::after {
+                        mix-blend-mode: multiply;
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        content: "";
+                        background: linear-gradient(180deg,rgba(255, 255, 255, 0) 70%, rgba(51, 51, 51, 0.66) 100%);
+                    }
+                    .main_title {
+                        z-index: 5;
+                        white-space: nowrap;
+                        position: absolute;
+                        bottom:8%; left: 50%;
+                        transform: translateX(-50%);
+                        text-align: center;
+                        font-weight:$font-m;
+                        line-height:$line-height-150;
+                        color:$color-white;
+                        font-size: $font-24;
+                    }
+
                     .sub_title {
+                        display: none;
                         p {}
+
                         .look_book_btn {}
                     }
                 }
+
                 .lb01 {
-                    
-                    background-image:url(../images/row6_lookbook/loobook_01.webp);}
-                .lb02 {background-image: url(../images/row6_lookbook/lookbook_02.webp);}
-                .lb03 {background-image: url(../images/row6_lookbook/lookbook_03.jpg);}
-                .lb04 {background-image: url(../images/row6_lookbook/lookbook_04.jpg);}
+
+                    background-image: url(../images/row6_lookbook/loobook_01.webp);
+                }
+
+                .lb02 {
+                    background-image: url(../images/row6_lookbook/lookbook_02.webp);
+                }
+
+                .lb03 {
+                    background-image: url(../images/row6_lookbook/lookbook_03.jpg);
+                }
+
+                .lb04 {
+                    background-image: url(../images/row6_lookbook/lookbook_04.jpg);
+                }
+
                 .look_book_item_wrap {
+                    .look_book_item:first-child {
+                       
+                        padding-bottom: 15px;
+                        border-bottom: 0.3px solid rgba($color: #b4b4b4, $alpha: 0.5);
+                    }
+                    .look_book_item:last-child {
+                       
+                        padding-top: 15px;
+                    }
                     .look_book_item {
                         display: flex;
                         .look_book_item_img {
-                            width: 80px; height: 80px;
-                            img {width: 100%;}
+                            width: 80px;
+                            height: 80px;
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
                         }
+
                         .look_book_item_name {
-                            p{}
+                            
+                            padding: 18.5px 0 18.5px 15px;
+                            > p:first-child {
+                                margin-bottom: 10px;
+                                color:$color-gray-3;
+                                font-weight: $font-m;
+                                
+                            }
+                            p:last-child {
+                                font-weight: $font-m;
+                            }
+                            .sale_price {display: flex;}
                         }
                     }
                 }
             }
-            
+
         }
     }
+
+
 
     /* 한화 이글스 */
     .row7 {
         display: flex;
         gap: 40px;
-        padding: 0 160px;
+        padding: 0 120px;
+        align-items: flex-end;
         .eagles_wrap {
             flex: 1;
-                        min-width: 0;
-                        max-width: 70%;
+            min-width: 0;
+            max-width: 70%;
+
             .title_wrap {
-                h3 {}
-                p {}
-                .shop_btn {}
+                h3 {margin-bottom: 10px;}
+
+                p {margin-bottom: 30px;}
+
+                .btn_wrap {
+                    margin-bottom: 30px;
+                    
+                    .shop_btn {
+                        @include btn-style-b;
+                    }
+                    
+                }
+                
             }
+
             #eagles_list {
+                position: relative;
+                padding-bottom: 80px;
                 .eagles_list_wrap {
                     .eagles_item {
+                        &:hover .item_info {
+                            opacity: 1;
+                            overflow: visible;
+                        }
+                        position: relative;
                         width: 100%;
                         aspect-ratio: 230 / 300;
-                        background-position: center;
-                        background-size: cover;
+                        @include bg-opt;
                         .item_info {
-                            p {}
+                            transition: all 0.2s ease;
+                            opacity: 0;
+                            overflow: hidden;
+                            position: absolute;
+                            bottom:0; left: 0;
+                            height: 27%;
+                            width: 100%;
+                            padding: 10px;
+                            background-color: rgba($color: #333, $alpha: 0.85);
+                            p {color:$color-white;}
+                            >p:first-child {
+                                font-size: $font-14; opacity: 0.6;
+                                margin-bottom: 6px;
+                            }
+                            >p:nth-of-type(2) {
+                                opacity: 0.9;
+                                margin-bottom: 10px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;}
                             .price_wrap {
-                                p {}
+                                >p:first-child {
+                                    
+                                    span {
+                                        margin-right: 5px;
+                                        font-weight: $font-sb; color:$color-point;}
+                                    del {
+                                        color:$color-white; opacity: 0.5;
+                                        font-size: $font-14;
+                                        margin-left: 5px;
+                                    }
+                                }
+                                >p:last-child {
+                                    opacity: 0.7;
+                                    font-size: $font-14;
+                                    text-align: right;
+                                }
                             }
                         }
                     }
-                    .hh1 {background-image: url(../images/row7_eagles/eagles_01.jpg);}
-                    .hh2 {background-image: url(../images/row7_eagles/eagles_02.jpg);}
-                    .hh3 {background-image: url(../images/row7_eagles/eagles_03.jpg);}
-                    .hh4 {background-image: url(../images/row7_eagles/eagles_04.jpg);}
-                    .hh5 {background-image: url(../images/row7_eagles/eagles_05.jpg);}
-                    .hh6 {background-image: url(../images/row7_eagles/eagles_06.jpg);}
-                    .hh7 {background-image: url(../images/row7_eagles/eagles_07.jpg);}
+
+                    .hh1 {
+                        background-image: url(../images/row7_eagles/eagles_01.jpg);
+                    }
+
+                    .hh2 {
+                        background-image: url(../images/row7_eagles/eagles_02.jpg);
+                    }
+
+                    .hh3 {
+                        background-image: url(../images/row7_eagles/eagles_03.jpg);
+                    }
+
+                    .hh4 {
+                        background-image: url(../images/row7_eagles/eagles_04.jpg);
+                    }
+
+                    .hh5 {
+                        background-image: url(../images/row7_eagles/eagles_05.jpg);
+                    }
+
+                    .hh6 {
+                        background-image: url(../images/row7_eagles/eagles_06.jpg);
+                    }
+
+                    .hh7 {
+                        background-image: url(../images/row7_eagles/eagles_07.jpg);
+                    }
                 }
-                .row7_pr_btn {}
-                .row7_ne_btn {}
-                .row7_scroll {}
+                .row7_pr_btn,
+                    .row7_ne_btn {
+                        @include pr-ne;
+                        top: calc(100% - 17px);
+                        svg {@include svg-opt;}
+                    }
+
+                    .row7_pr_btn {@include pr-btn;}
+                    .row7_ne_btn {@include ne-btn;}
+
+                .row7_scroll {
+                    .swiper-scrollbar-drag {
+                        background:#999;
+                    }
+                    height: 2px; width: 93%;
+                    bottom:  17px; left: 0;
+                }
             }
         }
+
         #eagles_bnr {
             flex: 0 0 30%;
             max-width: 30%;
+            
             .eagles_img_wrap {
                 .eagles_img {
-                    background-position: center;
-                        background-size: cover;
-                        width: 100%;
-                        aspect-ratio: 420 / 587;
+                    @include bg-opt;
+                    width: 100%;
+                    aspect-ratio: 480 / 650;
                 }
-                .hh_bnr1 {background-image: url(../images/row7_eagles/spyder_ealges_bnr_1.jpg);}
-                .hh_bnr2 {background-image: url(../images/row7_eagles/spyder_ealges_bnr_2.jpg);}
-                .hh_bnr3 {background-image: url(../images/row7_eagles/spyder_ealges_bnr_3.jpg);}
+
+                .hh_bnr1 {
+                    background-image: url(../images/row7_eagles/spyder_ealges_bnr_1.jpg);
+                }
+
+                .hh_bnr2 {
+                    background-image: url(../images/row7_eagles/spyder_ealges_bnr_2.jpg);
+                }
+
+                .hh_bnr3 {
+                    background-image: url(../images/row7_eagles/spyder_ealges_bnr_3.jpg);
+                }
             }
-            .swiper-pagination {}
-            .swiper-button-prev {}
-            .swiper-button-next {} 
+
+            .swiper-pagination {
+                .swiper-pagination-bullet {
+                    background:$color-gray-2;
+                    mix-blend-mode: multiply;
+                }
+                .swiper-pagination-bullet-active {
+                    background: $color-white;
+                }
+            }
+
+            .hh_bnr_pre,
+            .hh_bnr_nex {
+                border: none !important;
+                transition: opacity 0.2s ease;
+                opacity: 0;
+                background: rgba($color: #fff, $alpha: 0.3) !important; 
+                @include pr-ne;
+                svg {@include svg-opt;}
+            }
+            
+            .hh_bnr_pre {}
+            .hh_bnr_nex {}
         }
+        #eagles_bnr:hover .hh_bnr_pre {opacity: 1;}
+        #eagles_bnr:hover .hh_bnr_nex {opacity: 1;}
     }
+
+
     /* 빅펀치 */
     .row8 {
-        background-image: url(../images/row8_bigpunch/빅펀치\ 편집02.jpg);
-        background-repeat: no-repeat;
-                        background-size: cover;
-                        background-position: center;
+        background-image: url(../images/row8_bigpunch/big_punch_bg.jpg);
+        @include bg-opt;
+        align-items: flex-end;
         display: flex;
-        padding: 50px 160px;
-        gap:40px;
+        padding: 50px 80px;
+        gap: 40px;
+
         iframe {
             flex: 0 0 30%;
             max-width: 30%;
+            aspect-ratio: 480 / 650;
         }
+
         .big_punch_wrap {
             flex: 1;
-                        min-width: 0;
-                        max-width: 70%;
+            min-width: 0;
+            max-width: 70%;
+
             .title_wrap {
-                h3 {}
-                p {}
-                .shop_btn {}
+                h3 {
+                    color:$color-white;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color:$color-white;
+                    margin-bottom: 30px;
+                }
+
+                .btn_wrap {
+                    
+                    margin-bottom: 30px;
+                    .shop_btn {
+                        @include btn-style-w;
+                    }
+                    
+                }
+                
             }
+
             #big_punch_list {
+                position: relative;
+                padding-bottom: 80px;
                 .big_punch_list_wrap {
                     .big_punch_item {
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        background-position: center;
+                        @include bg-opt;
                         width: 100%;
                         aspect-ratio: 420 / 587;
+
                         .item_info {
+                            
                             p {}
+
                             .price_wrap {
                                 p {
                                     span {}
+
                                     del {}
                                 }
                             }
                         }
                     }
-                    .bp1 {background-image: url(../images/row8_bigpunch/big_punch_01.png);}
-                    .bp2 {background-image: url(../images/row8_bigpunch/big_punch_02.png);}
-                    .bp3 {background-image: url(../images/row8_bigpunch/big_punch_03.png);}
-                    .bp4 {background-image: url(../images/row8_bigpunch/big_punch_04.png);}
-                    .bp5 {background-image: url(../images/row8_bigpunch/big_punch_05.jpg);}
+
+                    .bp1 {
+                        background-image: url(../images/row8_bigpunch/big_punch_01.png);
+                    }
+
+                    .bp2 {
+                        background-image: url(../images/row8_bigpunch/big_punch_02.png);
+                    }
+
+                    .bp3 {
+                        background-image: url(../images/row8_bigpunch/big_punch_03.png);
+                    }
+
+                    .bp4 {
+                        background-image: url(../images/row8_bigpunch/big_punch_04.png);
+                    }
+
+                    .bp5 {
+                        background-image: url(../images/row8_bigpunch/big_punch_05.jpg);
+                    }
                 }
-                .swiper-pagination {}
-                .swiper-button-prev {}
-                .swiper-button-next {} 
+                .bp_pre,
+                    .bp_nex {
+                        top: calc(100% - 17px);
+                        border: 0.5px solid rgba($color: #b4b4b4, $alpha: 0.5) !important;
+                        background: rgba($color: #fff, $alpha: 0.2) !important;
+                        @include pr-ne;
+                        svg {
+                            color:$color-white !important;
+                            @include svg-opt;
+                        }
+                    }
+
+                    .bp_pre {
+                        @include pr-btn;
+                    }
+                    .bp_nex {
+                        @include ne-btn;
+                    }
+                .swiper-scrollbar {
+                    height: 2px; width: 93%;
+                    bottom:  17px; left: 0;
+                    background-color: rgba($color: #b4b4b4, $alpha: 0.3);
+                    .swiper-scrollbar-drag {background-color: $color-gray-1 !important;}
+                }
+                
             }
         }
     }
 
     /* 인스타그램 */
     .row9 {
-        padding: 0 160px;
+        padding: 0 120px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
         .title_wrap {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 30px;
             h3 {}
-            p {}
+
+            p {
+                color:$color-gray-1;
+            }
         }
+
         .inst_wrap {
             width: 100%;
+
             ul {
                 display: flex;
                 gap: 15px;
+
                 li {
                     .insta_frame {
-                        background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                        @include bg-opt;
                     }
+
                     aspect-ratio: 1/1;
-                    flex: 0 0 calc((100% - 15px * 4 ) / 5); 
-                    
+                    flex: 0 0 calc((100% - 15px * 4) / 5);
+
                     img {
                         width: 100%;
                     }
                 }
             }
-            ul:last-child {margin-top: 15px;}
-            .if1 {background-image: url(../images/row9_insta/insta_01.jpg);}
-            .if2 {background-image: url(../images/row9_insta/insta_02.jpg);}
-            .if3 {background-image: url(../images/row9_insta/insta_03.jpg);}
-            .if4 {background-image: url(../images/row9_insta/insta_04.jpg);}
-            .if5 {background-image: url(../images/row9_insta/insta_05.jpg);}
-            .if6 {background-image: url(../images/row9_insta/insta_06.jpg);}
-            .if7 {background-image: url(../images/row9_insta/insta_07.jpg);}
-            .if8 {background-image: url(../images/row9_insta/insta_08.jpg);}
-            .if9 {background-image: url(../images/row9_insta/insta_09.jpg);}
-            .if10 {background-image: url(../images/row9_insta/insta_010.jpeg);}
+
+            ul:last-child {
+                margin-top: 15px;
+            }
+
+            .if1 {
+                background-image: url(../images/row9_insta/insta_01.jpg);
+            }
+
+            .if2 {
+                background-image: url(../images/row9_insta/insta_02.jpg);
+            }
+
+            .if3 {
+                background-image: url(../images/row9_insta/insta_03.jpg);
+            }
+
+            .if4 {
+                background-image: url(../images/row9_insta/insta_04.jpg);
+            }
+
+            .if5 {
+                background-image: url(../images/row9_insta/insta_05.jpg);
+            }
+
+            .if6 {
+                background-image: url(../images/row9_insta/insta_06.jpg);
+            }
+
+            .if7 {
+                background-image: url(../images/row9_insta/insta_07.jpg);
+            }
+
+            .if8 {
+                background-image: url(../images/row9_insta/insta_08.jpg);
+            }
+
+            .if9 {
+                background-image: url(../images/row9_insta/insta_09.jpg);
+            }
+
+            .if10 {
+                background-image: url(../images/row9_insta/insta_010.jpeg);
+            }
 
         }
-        .insta_btn {}
+
+        .insta_btn {
+            text-align: center;
+            @include btn-style-b;
+            margin-top: 15px;
+        }
     }
 }
 
 
 footer {
-    padding: 50px 160px 100px 160px;
+    padding: 50px  100px ;
     display: flex;
     justify-content: space-between;
+
     .ftr_left {
         .store_btn {}
+
         ul {
             li {
                 span {}
             }
         }
     }
+
     .ftr_right {
         .sns {
             display: flex;
+
             li {
                 img {}
             }
         }
+
         .notice {
             p {}
         }
+
         .box3 {
             display: flex;
+
             ul {
                 li {}
             }

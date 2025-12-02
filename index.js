@@ -21,8 +21,12 @@ const row2Bnr = new Swiper('#solarcore_all', {
     spaceBetween: 20,
     loop:true,
     navigation: {
-        nextEl: "#solarcore_all .swiper-button-next",
-        prevEl: "#solarcore_all .swiper-button-prev",
+        nextEl: ".solarcore_next",
+        prevEl: ".solarcore_prev",
+    },
+    scrollbar: {
+        el: "#solarcore_all .swiper-scrollbar",
+        /* hide: true, */
     },
 })
 
@@ -37,6 +41,10 @@ const row3Bnr = new Swiper('#collect_women', {
     navigation: {
         nextEl: "#collect_women .swiper-button-next",
         prevEl: "#collect_women .swiper-button-prev",
+    },
+    scrollbar: {
+        el: "#collect_women .swiper-scrollbar",
+        /* hide: true, */
     },
 })
 
@@ -61,8 +69,12 @@ const row7List = new Swiper('#eagles_list', {
     spaceBetween: 20,
     loop:true,
     navigation: {
-        nextEl: "#eagles_list .swiper-button-next",
-        prevEl: "#eagles_list .swiper-button-prev",
+        nextEl: ".row7_ne_btn",
+        prevEl: ".row7_pr_btn",
+    },
+    scrollbar: {
+        el: "#eagles_list .swiper-scrollbar",
+        /* hide: true, */
     },
 })
 
@@ -88,7 +100,11 @@ const row8List = new Swiper('#big_punch_list', {
     spaceBetween: 20,
     loop:true,
     navigation: {
-        nextEl: "#big_punch_list .swiper-button-next",
-        prevEl: "#big_punch_list .swiper-button-prev",
+        nextEl: "#big_punch_list .bp_nex",
+        prevEl: "#big_punch_list .bp_pre",
+    },
+    scrollbar: {
+        el: "#big_punch_list .swiper-scrollbar",
+        /* hide: true, */
     },
 })
