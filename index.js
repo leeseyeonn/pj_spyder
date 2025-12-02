@@ -1,8 +1,11 @@
 /* ----------------------------------슬라이드 배너 */
 
 const row1Bnr = new Swiper('#main_banner', { 
-    loop:true,
-    
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: "#main_banner .swiper-pagination",
         type: "fraction",
@@ -11,7 +14,31 @@ const row1Bnr = new Swiper('#main_banner', {
         nextEl: "#main_banner .swiper-button-next",
         prevEl: "#main_banner .swiper-button-prev",
     },
-})
+
+    on: {
+        init() {
+            startProgress();
+        },
+        slideChangeTransitionStart() {
+            startProgress();
+        }
+    }
+});
+
+function startProgress() {
+    const bar = document.querySelector("#main_banner .progress");
+
+    bar.style.transition = "none";
+    bar.style.width = "0%";
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            bar.style.transition = "width 5s linear";
+            bar.style.width = "100%";
+        });
+    });
+}
+
 
 /* -------------------------------------신상품 */
 
@@ -44,7 +71,7 @@ const row3Bnr = new Swiper('#collect_women', {
     },
     scrollbar: {
         el: "#collect_women .swiper-scrollbar",
-        /* hide: true, */
+
     },
 })
 
@@ -74,7 +101,7 @@ const row7List = new Swiper('#eagles_list', {
     },
     scrollbar: {
         el: "#eagles_list .swiper-scrollbar",
-        /* hide: true, */
+
     },
 })
 
@@ -105,6 +132,6 @@ const row8List = new Swiper('#big_punch_list', {
     },
     scrollbar: {
         el: "#big_punch_list .swiper-scrollbar",
-        /* hide: true, */
+
     },
 })

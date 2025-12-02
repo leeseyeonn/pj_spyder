@@ -1,9 +1,23 @@
 @charset "UTF-8";
+@keyframes bnr-ani {
+  0% {
+    opacity: 0;
+    transform: translateX(-2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* -------------------------- 헤더 */
 header .header_bg_warp {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 45px 20px;
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 header h1 {
@@ -293,21 +307,48 @@ main section .item_wrap .price_color .item_color {
 main {
   /* 메인 배너 */
 }
-main .row1 #main_banner {
-  height: 90vh;
+main .row1 #main_banner .swiper-slide-active::after {
+  z-index: 50;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 60%);
 }
-main .row1 #main_banner .main_banner_wrap .bannr_img h2 {
+main .row1 #main_banner .swiper-slide-active .bnr_text_wrap {
+  animation: bnr-ani 2s both;
+}
+main .row1 #main_banner {
+  height: 100vh;
+  position: relative;
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img {
+  padding-left: 120px;
+  padding-bottom: 250px;
+  display: flex;
+  align-items: flex-end;
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img .bnr_text_wrap {
+  opacity: 0;
+  position: relative;
+  z-index: 60;
+}
+main .row1 #main_banner .main_banner_wrap .bannr_img .bnr_text_wrap h2 {
+  margin-bottom: 15px;
   font-size: 2.813rem;
   color: #fff;
   font-weight: 600;
 }
-main .row1 #main_banner .main_banner_wrap .bannr_img p {
-  margin: 15px 0;
+main .row1 #main_banner .main_banner_wrap .bannr_img .bnr_text_wrap p {
+  margin-bottom: 30px;
   color: #fff;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  opacity: 0.7;
 }
-main .row1 #main_banner .main_banner_wrap .bannr_img .bnr_btn {
+main .row1 #main_banner .main_banner_wrap .bannr_img .bnr_text_wrap .bnr_btn {
   padding: 10px 50px;
   color: #fff;
   border: 0.5px solid #fff;
@@ -316,19 +357,67 @@ main .row1 #main_banner .main_banner_wrap .bannr_img_001 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background: url(../images/row1_main_bnr/main_bnr_001.jpg);
+  background-image: url(../images/row1_main_bnr/main_bnr_001.jpg);
 }
 main .row1 #main_banner .main_banner_wrap .bannr_img_002 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background: url(../images/row1_main_bnr/main_bnr_002.jpg);
+  background-image: url(../images/row1_main_bnr/main_bnr_002.jpg);
 }
 main .row1 #main_banner .main_banner_wrap .bannr_img_003 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background: url(../images/row1_main_bnr/main_bnr_003.jpg);
+  background-image: url(../images/row1_main_bnr/main_bnr_003.jpg);
+}
+main .row1 #main_banner .row1_pr_btn svg, main .row1 #main_banner .row1_ne_btn svg {
+  width: 50%;
+  height: 50%;
+  color: #fff;
+  opacity: 0.5;
+}
+main .row1 #main_banner .row1_pr_btn {
+  left: 45px;
+}
+main .row1 #main_banner .row1_ne_btn {
+  right: 45px;
+}
+main .row1 #main_banner .row1_pg {
+  position: absolute;
+  width: fit-content;
+  transform: translate(0, 0);
+  left: 300px;
+  bottom: 112px;
+  color: #fff;
+}
+main .row1 #main_banner .row1_pg .swiper-pagination-current {
+  color: #fff;
+  font-weight: 500;
+}
+main .row1 #main_banner .row1_pg .swiper-pagination-total {
+  color: #fff;
+  opacity: 0.5;
+  font-weight: 500;
+}
+main .row1 #main_banner .progress-bar {
+  z-index: 50;
+  width: 150px;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  bottom: 120px;
+  left: 120px;
+  transform: translateX(0%);
+  overflow: hidden;
+  border-radius: 50px;
+}
+main .row1 #main_banner .progress {
+  width: 0%;
+  height: 100%;
+  background: white;
+  display: block;
+  transition: width linear;
 }
 main {
   /* 신상품 (솔라코어) */
@@ -397,7 +486,6 @@ main .row2 .new_item_wrap .title_wrap .shop_btn {
 }
 main .row2 .new_item_wrap #solarcore_all {
   position: relative;
-  padding-bottom: 80px;
   width: 100%;
 }
 main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap .item_img {
@@ -409,7 +497,12 @@ main .row2 .new_item_wrap #solarcore_all .solarcore_wrap .item_wrap .item_img im
 }
 main .row2 .new_item_wrap #solarcore_all .swiper-button-prev,
 main .row2 .new_item_wrap #solarcore_all .swiper-button-next {
-  top: calc(100% - 17px);
+  /* top: calc(100% - 17px); */
+  border: 0.5px solid rgba(180, 180, 180, 0.5) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  top: 45%;
   position: absolute;
   border: 0.5px solid rgba(180, 180, 180, 0.5);
   width: 34px;
@@ -423,12 +516,10 @@ main .row2 .new_item_wrap #solarcore_all .swiper-button-next svg {
   color: #333;
 }
 main .row2 .new_item_wrap #solarcore_all .swiper-button-prev {
-  left: calc(100% - 68px);
-  bottom: 0;
+  left: 15px;
 }
 main .row2 .new_item_wrap #solarcore_all .swiper-button-next {
-  right: 0;
-  bottom: 0;
+  right: 15px;
 }
 main .row2 .new_item_wrap #solarcore_all .swiper-scrollbar .swiper-scrollbar-drag {
   background: #999;
@@ -438,6 +529,12 @@ main .row2 .new_item_wrap #solarcore_all .swiper-scrollbar {
   width: 93%;
   bottom: 17px;
   left: 0;
+}
+main .row2 #solarcore_all:hover .swiper-button-prev {
+  opacity: 1;
+}
+main .row2 #solarcore_all:hover .swiper-button-next {
+  opacity: 1;
 }
 main {
   /* 콜렉숀 */
@@ -504,20 +601,23 @@ main .row3 .collection_wrap #collect_women {
   flex: 1;
   min-width: 0;
   max-width: 100%;
-  padding-bottom: 74px;
 }
 main .row3 .collection_wrap #collect_women .collect_women_wrap .collect_wrap .item_img img {
   width: 100%;
 }
 main .row3 .collection_wrap #collect_women .swiper-button-prev,
 main .row3 .collection_wrap #collect_women .swiper-button-next {
+  border: 0.5px solid rgba(180, 180, 180, 0.5) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  transition: opacity 0.3s ease;
+  opacity: 0;
   position: absolute;
   border: 0.5px solid rgba(180, 180, 180, 0.5);
   width: 34px;
   height: 34px;
   transform: translateY(5px);
   background: #fff;
-  top: calc(100% - 17px);
+  top: 45%;
 }
 main .row3 .collection_wrap #collect_women .swiper-button-prev svg,
 main .row3 .collection_wrap #collect_women .swiper-button-next svg {
@@ -526,10 +626,10 @@ main .row3 .collection_wrap #collect_women .swiper-button-next svg {
   color: #333;
 }
 main .row3 .collection_wrap #collect_women .swiper-button-prev {
-  left: calc(100% - 68px);
+  left: 15px;
 }
 main .row3 .collection_wrap #collect_women .swiper-button-next {
-  right: 0;
+  right: 15px;
 }
 main .row3 .collection_wrap #collect_women .swiper-scrollbar .swiper-scrollbar-drag {
   background: #999;
@@ -539,6 +639,12 @@ main .row3 .collection_wrap #collect_women .swiper-scrollbar {
   width: 95%;
   bottom: 17px;
   left: 0;
+}
+main .row3 #collect_women:hover .swiper-button-prev {
+  opacity: 1;
+}
+main .row3 #collect_women:hover .swiper-button-next {
+  opacity: 1;
 }
 main {
   /* 신발 제품 */
@@ -759,7 +865,6 @@ main .row7 .eagles_wrap .title_wrap .btn_wrap .shop_btn {
 }
 main .row7 .eagles_wrap #eagles_list {
   position: relative;
-  padding-bottom: 80px;
 }
 main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .eagles_item:hover .item_info {
   opacity: 1;
@@ -839,13 +944,23 @@ main .row7 .eagles_wrap #eagles_list .eagles_list_wrap .hh7 {
 }
 main .row7 .eagles_wrap #eagles_list .row7_pr_btn,
 main .row7 .eagles_wrap #eagles_list .row7_ne_btn {
+  border: 0.5px solid rgba(180, 180, 180, 0.5) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
   position: absolute;
   border: 0.5px solid rgba(180, 180, 180, 0.5);
   width: 34px;
   height: 34px;
   transform: translateY(5px);
   background: #fff;
-  top: calc(100% - 17px);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  border: 0.5px solid rgba(180, 180, 180, 0.5);
+  width: 34px;
+  height: 34px;
+  transform: translateY(5px);
+  background: #fff;
+  top: 50%;
 }
 main .row7 .eagles_wrap #eagles_list .row7_pr_btn svg,
 main .row7 .eagles_wrap #eagles_list .row7_ne_btn svg {
@@ -854,10 +969,10 @@ main .row7 .eagles_wrap #eagles_list .row7_ne_btn svg {
   color: #333;
 }
 main .row7 .eagles_wrap #eagles_list .row7_pr_btn {
-  left: calc(100% - 68px);
+  left: 15px;
 }
 main .row7 .eagles_wrap #eagles_list .row7_ne_btn {
-  right: 0;
+  right: 15px;
 }
 main .row7 .eagles_wrap #eagles_list .row7_scroll .swiper-scrollbar-drag {
   background: #999;
@@ -867,6 +982,12 @@ main .row7 .eagles_wrap #eagles_list .row7_scroll {
   width: 93%;
   bottom: 17px;
   left: 0;
+}
+main .row7 .eagles_wrap #eagles_list:hover .swiper-button-prev {
+  opacity: 1;
+}
+main .row7 .eagles_wrap #eagles_list:hover .swiper-button-next {
+  opacity: 1;
 }
 main .row7 #eagles_bnr {
   flex: 0 0 30%;
@@ -961,7 +1082,10 @@ main .row8 .big_punch_wrap .title_wrap .btn_wrap .shop_btn {
 }
 main .row8 .big_punch_wrap #big_punch_list {
   position: relative;
-  padding-bottom: 80px;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item:hover .item_info {
+  opacity: 1;
+  overflow: visible;
 }
 main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item {
   background-repeat: no-repeat;
@@ -969,6 +1093,49 @@ main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item 
   background-size: cover;
   width: 100%;
   aspect-ratio: 420/587;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item .item_info {
+  transition: all 0.2s ease;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 27%;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(51, 51, 51, 0.85);
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item .item_info p {
+  color: #fff;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item .item_info > p:first-child {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item .item_info > p:nth-of-type(2) {
+  opacity: 0.9;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item .item_info .price_wrap > p:first-child span {
+  margin-right: 5px;
+  font-weight: 600;
+  color: #FFF4A0;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item .item_info .price_wrap > p:first-child del {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  margin-left: 5px;
+}
+main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .big_punch_item .item_info .price_wrap > p:last-child {
+  opacity: 0.7;
+  font-size: 0.875rem;
+  text-align: right;
 }
 main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .bp1 {
   background-image: url(../images/row8_bigpunch/big_punch_01.png);
@@ -987,7 +1154,9 @@ main .row8 .big_punch_wrap #big_punch_list .big_punch_list_wrap .bp5 {
 }
 main .row8 .big_punch_wrap #big_punch_list .bp_pre,
 main .row8 .big_punch_wrap #big_punch_list .bp_nex {
-  top: calc(100% - 17px);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  top: 50%;
   border: 0.5px solid rgba(180, 180, 180, 0.5) !important;
   background: rgba(255, 255, 255, 0.2) !important;
   position: absolute;
@@ -1005,10 +1174,10 @@ main .row8 .big_punch_wrap #big_punch_list .bp_nex svg {
   color: #333;
 }
 main .row8 .big_punch_wrap #big_punch_list .bp_pre {
-  left: calc(100% - 68px);
+  left: 15px;
 }
 main .row8 .big_punch_wrap #big_punch_list .bp_nex {
-  right: 0;
+  right: 15px;
 }
 main .row8 .big_punch_wrap #big_punch_list .swiper-scrollbar {
   height: 2px;
@@ -1019,6 +1188,12 @@ main .row8 .big_punch_wrap #big_punch_list .swiper-scrollbar {
 }
 main .row8 .big_punch_wrap #big_punch_list .swiper-scrollbar .swiper-scrollbar-drag {
   background-color: #B4B4B4 !important;
+}
+main .row8 #big_punch_list:hover .swiper-button-prev {
+  opacity: 1;
+}
+main .row8 #big_punch_list:hover .swiper-button-next {
+  opacity: 1;
 }
 main {
   /* 인스타그램 */
@@ -1099,7 +1274,12 @@ main .row9 .insta_btn {
   margin-top: 15px;
 }
 
+footer * {
+  color: #fff;
+}
+
 footer {
+  background-color: #212121;
   padding: 50px 100px;
   display: flex;
   justify-content: space-between;

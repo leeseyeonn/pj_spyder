@@ -7,6 +7,9 @@
     <title>SPYDER</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -240,25 +243,35 @@
             <div class="swiper" id="main_banner">
                 <div class="swiper-wrapper main_banner_wrap">
                     <div class="swiper-slide bannr_img bannr_img_001">
-                        <h2>Beyond the Slopes</h2>
-                        <p>2025 WINTER MEN'S LIFESTYLE</p>
-                        <button type="button" class="bnr_btn">자세히 보기</button>
+                        <div class="bnr_text_wrap">
+                            <h2>Beyond the Slopes</h2>
+                            <p>2025 WINTER MEN'S LIFESTYLE</p>
+                            <button type="button" class="bnr_btn">자세히 보기</button>
+                        </div>
                     </div>
                     <div class="swiper-slide bannr_img bannr_img_002">
-                        <h2>SPYDER X C.P COMPANY</h2>
-                        <p>도시와 아웃도어의 경계를 허무는 테크 유틸리티 웨어</p>
-                        <button type="button" class="bnr_btn">자세히 보기</button>
+                        <div class="bnr_text_wrap">
+                            <h2>SPYDER X C.P COMPANY</h2>
+                            <p>도시와 아웃도어의 경계를 허무는 테크 유틸리티 웨어</p>
+                            <button type="button" class="bnr_btn">자세히 보기</button>
+                        </div>
                     </div>
                     <div class="swiper-slide bannr_img bannr_img_003">
-                        <h2>FOR SKIER - US SKI COLLECTION </h2>
-                        <p>스키어의 시즌을 완성하는 기술력</p>
-                        <button type="button" class="bnr_btn">자세히 보기</button>
+                        <div class="bnr_text_wrap">
+                            <h2>FOR SKIER - US SKI COLLECTION </h2>
+                            <p>스키어의 시즌을 완성하는 기술력</p>
+                            <button type="button" class="bnr_btn">자세히 보기</button>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-pagination row1_pg"></div>
+                <div class="swiper-pagination row1_pg">
+                </div>
                 <div class="swiper-button-prev row1_pr_btn"></div>
                 <div class="swiper-button-next row1_ne_btn"></div>
-                <div class="swiper-scrollbar row1_scroll"></div>
+                <div class="progress-bar">
+                    <span class="progress"></span>
+                </div>
+                <!-- <div class="swiper-scrollbar row1_scroll"></div> -->
             </div>
         </section> <!-- 매인배너 끝 -->
 
@@ -272,12 +285,12 @@
             </div>
             <div class="new_item_wrap">
                 <!-- 타이틀 + 버튼 -->
-                
+
                 <div class="title_wrap">
                     <h3>지금 주목할 만한 상품</h3>
                     <div class="text_wrap">
                         <p>부피는 줄이고, 퍼포먼스는 극대화한 차세대 보온 솔루션</p>
-                        
+
                     </div>
                     <div class="btn_wrap">
                         <button type="button" class="shop_btn">SHOP NOW</button>
@@ -395,7 +408,7 @@
                         <!--필요 시 사용(선택)-->
                         <div class="swiper-button-prev solarcore_prev"></div>
                         <div class="swiper-button-next solarcore_next"></div>
-                        <div class="swiper-scrollbar"></div>
+                        <!-- <div class="swiper-scrollbar"></div> -->
                     </div>
                 </div>
             </div>
@@ -511,7 +524,7 @@
                     <!--필요 시 사용(선택)-->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-                    <div class="swiper-scrollbar"></div>
+                    <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
             </div>
         </section><!-- 콜렉션 끝 -->
@@ -839,7 +852,7 @@
                     <!--필요 시 사용(선택)-->
                     <div class="swiper-button-prev row7_pr_btn"></div>
                     <div class="swiper-button-next row7_ne_btn"></div>
-                    <div class="swiper-scrollbar row7_scroll"></div>
+                    <!-- <div class="swiper-scrollbar row7_scroll"></div> -->
                 </div>
             </div>
             <!-- 오른쪽 배너 슬라이드 -->
@@ -859,8 +872,7 @@
 
         <!-- 빅펀치 시작 -->
         <section class="row row8 big_punch">
-            <iframe  src="https://www.youtube.com/embed/swHeUcyANqs"
-                title="스파이더 빅펀치 복싱 크루 #shorts" frameborder="0"
+            <iframe src="https://www.youtube.com/embed/swHeUcyANqs" title="스파이더 빅펀치 복싱 크루 #shorts" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div class="big_punch_wrap">
@@ -869,9 +881,9 @@
                     <p>불굴의 의지와 투혼을 담은 복싱 그 이상의 가치</p>
                     <div class="btn_wrap">
                         <button type="button" class="shop_btn">SHOP NOW</button>
-                        
+
                     </div>
-                    
+
                 </div>
                 <div class="swiper" id="big_punch_list">
                     <!--필수-->
@@ -935,7 +947,7 @@
                     <!--필요 시 사용(선택)-->
                     <div class="swiper-button-prev bp_pre"></div>
                     <div class="swiper-button-next bp_nex"></div>
-                    <div class="swiper-scrollbar"></div>
+                    <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
             </div>
         </section> <!-- 빅펀치 끝 -->
