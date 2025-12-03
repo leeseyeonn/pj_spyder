@@ -9,19 +9,22 @@ $font-24:1.5rem;
 $font-30:1.875rem;
 $font-32:2rem;
 $font-45:2.813rem;
+$font-s:300;
 $font-m:500;
 $font-sb:600;
 $font-b:700;
 
 $line-height-120:120%;
 $line-height-150:150%;
+$line-height-200:200%;
 
 $color-gray-1:#B4B4B4;
 $color-gray-2:#767676;
 $color-gray-3:#606060;
 $color-white:#fff;
 $color-black:#333;
-$color-point :#FFF4A0;
+$color-point-1 :#FFF4A0;
+$color-point-2:#D40631;
 
 
 
@@ -42,8 +45,11 @@ $color-point :#FFF4A0;
 
 @mixin title-30 {font-size:1.875rem; font-weight: 600;}
 
-@mixin btn-style-w {padding:10px 50px; color:#fff; border: 0.5px solid #fff;}
-@mixin btn-style-b {padding:10px 50px; color:#333; border: 0.5px solid #333;}
+@mixin btn-style-w {/* padding:10px 50px; color:#fff; border: 0.5px solid #fff; */
+display: flex; gap:3px; font-weight: 600;}
+@mixin btn-style-b {/* padding:10px 50px; color:#333; border: 0.5px solid #333; */
+    display: flex; gap:3px;
+}
 
 @mixin btn-style-w-c {padding:10px 20px; color:#fff; border: 0.5px solid #fff;}
 
@@ -70,3 +76,7 @@ $color-point :#FFF4A0;
     100% {opacity: 1 ;transform: translateX(0);}
 }
 
+@keyframes hdr-ani {
+    0% {opacity: 0.5;}
+    100% {opacity: 1;}
+}

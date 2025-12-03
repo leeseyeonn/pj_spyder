@@ -135,3 +135,19 @@ const row8List = new Swiper('#big_punch_list', {
 
     },
 })
+
+
+/* ------------------------------- 헤더 컨트롤 */
+
+const header = document.querySelector("header");
+
+function checkScroll() {
+    if (window.scrollY > 300) {
+        header.classList.add("active");
+    } else {
+        header.classList.remove("active");
+    }
+}
+
+window.addEventListener("scroll", checkScroll);
+window.addEventListener("load", checkScroll);
