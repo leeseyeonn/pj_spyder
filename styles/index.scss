@@ -90,19 +90,43 @@ header {
             nav {
                 cursor: pointer;
                 .main_menu_wrap {
+    > .main_menu:nth-child(-n + 4) {
+        &:hover > p::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scaleX(1);
+        }
+    }
+}
+                .main_menu_wrap {
                     position: relative;
                     display: flex;
                     gap:30px;
                     .main_menu {
+                        /* &:hover > p::after {
+                            opacity: 1;
+                            transform: translate(-50%,-50%) scaleX(1);
+                        } */
                         padding: 30px 10px ;
-                        color: #fff;
-                        font-weight: 500;
                         display: flex;
                         flex-flow: column nowrap;
-
+                        >p {
+                            position: relative;
+                            &::after {
+                                transform-origin: left;  
+                                transition: transform 0.2s ease;
+                                transform: translate(-50%,-50%) scaleX(0);
+                                opacity: 0;
+                                width: 110%; height: 2px;
+                                content: ""; position: absolute;
+                                bottom:-31px; left: 50%;
+                                background-color: #212121;
+                            }
+                        color: #fff;
+                        font-weight: 500;
+                        }
                         .sub_menu_all {
                             border-top: 1px solid rgba(229, 229, 229, 0.6);
-                            transition:  opacity 0.3s ease, visibility 0.3s ease;
+                            transition:  opacity 0.2s ease, visibility 0.2s ease;
                             opacity: 0;
                             visibility: hidden;
                             transform: translateX(-50%);
@@ -195,9 +219,9 @@ header.active {
         .hdr_etc {display: none;} 
         .nav_wrap{
             align-items: center;
-            nav .main_menu_wrap li {color:#212121;}
-            nav .main_menu_wrap li:nth-child(5) {color:#FF6600;}
-            nav .main_menu_wrap li:nth-child(6) {color:#FFBD24;}
+            nav .main_menu_wrap li p {color:#212121;}
+            nav .main_menu_wrap .main_menu:nth-child(5)>p{color:#FF6600;}
+            nav .main_menu_wrap .main_menu:nth-child(6)>p {color:#FFBD24;}
         }
         .hdr_ect_right {
             &::after {
@@ -210,29 +234,52 @@ header.active {
 }
 
 header:hover {
-    .header_bg_warp{
+    .header_bg_warp {
         background: $color-white;
+
         h1 {
             svg {
                 path {
                     fill: #212121;
                 }
-                
+
             }
         }
+
         .hdr_serv li svg path {
             stroke: #212121;
         }
+
         .hdr_menu {
-            p {color:#212121;}
+            .nav_wrap {
+                nav .main_menu_wrap li {
+                    color: #212121;
+                }
+
+                nav .main_menu_wrap .main_menu:nth-child(5)>p {
+                    color: #FF6600;
+                }
+
+                nav .main_menu_wrap .main_menu:nth-child(6)>p{
+                    color: #FFBD24;
+                }
+            }
+
+            p {
+                color: #212121;
+            }
+
             .hdr_ect_right {
                 &::after {
                     background: rgba($color: #212121, $alpha: 0.5);
                 }
             }
         }
-        .nav_wrap nav .main_menu_wrap li {color:#212121;}
-    } 
+
+        .nav_wrap nav .main_menu_wrap li {
+            color: #212121;
+        }
+    }
 }
 
 
@@ -244,6 +291,17 @@ main {
     }
 
     section {
+        .shop_btn {
+            &:hover {
+                svg {
+                    transform: translateX(5px);
+                }
+            }
+            svg {
+                transition: all 0.2s ease;
+                transform: translateX(0);
+            }
+        }
         .scr1 {
             .item_color_01 {
                 @include c-blue;
@@ -420,10 +478,9 @@ main {
 
 
             .item_name {
-                margin-bottom:10px;
-                font-size: $font-18;
+                margin-bottom:5px;
                 line-height:$line-height-150;
-                font-weight: $font-sb;
+                font-weight: $font-m;
             }
 
             .price_color {
@@ -433,7 +490,6 @@ main {
 
                 .item_price {
 
-                    font-size: $font-18;
                     font-weight: $font-sb;
                 }
 
@@ -651,9 +707,11 @@ main {
 
                     .cate_btn.active {
                         color: $color-black;
+                        font-weight: $font-m;
                     }
                     .shop_btn {
-                        margin-left: 10px;
+                        
+                        margin-left: 20px;
                         font-weight: 500;
                     }
                 }
@@ -817,9 +875,15 @@ main {
                     z-index: 5;
 
                     .cate_btn {
+                        transition: all 0s ease;
                         @include btn-style-w-c;
                         margin-right: 20px;
                     }
+                    .cate_btn:hover,  .cate_btn.active {
+                        background-color: #fff;
+                        color:$color-black;
+                    }
+                    
                 }
 
                 .cate_btn_wrap .cate_btn:last-child {
@@ -925,7 +989,6 @@ main {
                     aspect-ratio: 3 / 4;
 
                     span {
-                        font-size: $font-18;
                         font-weight: $font-m;
                         margin-bottom: 15px;
                         display: block;
@@ -1111,15 +1174,16 @@ main {
                             font-weight: 300;
                             color:$color-white;
                             line-height:$line-height-150;
-                            margin-bottom: 30px;
                         }
 
                         .look_book_btn {
+                            opacity: 0;
+                            margin-top: 120px;
                             padding: 10px 50px;
                             border: 0.5px solid #b4b4b4;
                             color:$color-white;
                             background: transparent;
-                            transition: background 0.2s ease;
+                            transition: all 0.2s ease;
                         }
                         .look_book_btn:hover {
                             background: $color-white;
@@ -1138,6 +1202,10 @@ main {
                         z-index: 50;
                         opacity: 1; visibility: visible;
                     }
+                    .look_book_btn {
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 }
                 .lb01 {
 
@@ -1145,10 +1213,12 @@ main {
                 }
 
                 .lb02 {
+                    background-position-x: -170px;
                     background-image: url(../images/row6_lookbook/lookbook_02.webp);
                 }
 
                 .lb03 {
+                    
                     background-image: url(../images/row6_lookbook/lookbook_03.jpg);
                 }
 
@@ -1597,23 +1667,35 @@ main {
                     }
 
                     .bp1:hover {
-                        background-image: url(../images/row8_bigpunch/bg_1.jpg);
+                        background-image: url(../images/row8_bigpunch/bg_2.jpg);
                     }
 
                     .bp2 {
                         background-image: url(../images/row8_bigpunch/big_punch_02.png);
                     }
+                    .bp2:hover {
+                        background-image: url(../images/row8_bigpunch/bg_1.jpg);
+                    }
 
                     .bp3 {
                         background-image: url(../images/row8_bigpunch/big_punch_03.png);
+                    }
+                    .bp3:hover {
+                        background-image: url(../images/row8_bigpunch/bg_3.jpg);
                     }
 
                     .bp4 {
                         background-image: url(../images/row8_bigpunch/big_punch_04.png);
                     }
+                    .bp4:hover {
+                        background-image: url(../images/row8_bigpunch/bg_4.jpg);
+                    }
 
                     .bp5 {
-                        background-image: url(../images/row8_bigpunch/big_punch_05.jpg);
+                        background-image: url(../images/row8_bigpunch/big_punch_06.png);
+                    }
+                    .bp5:hover {
+                        background-image: url(../images/row8_bigpunch/bg_5.jpg);
                     }
                 }
 
@@ -1682,6 +1764,7 @@ main {
 
             p {
                 color: $color-gray-1;
+                cursor: pointer;
             }
         }
 
@@ -1693,6 +1776,7 @@ main {
                 gap: 15px;
 
                 li {
+                    cursor: pointer;
                     .insta_frame {
                         @include bg-opt;
                     }

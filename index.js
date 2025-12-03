@@ -151,3 +151,38 @@ function checkScroll() {
 
 window.addEventListener("scroll", checkScroll);
 window.addEventListener("load", checkScroll);
+
+/* -------------------------- 솔라코어 카데고리 컨트롤 */
+
+const solarCate = document.querySelectorAll('.row2 .cate_btn')
+
+console.log(solarCate)
+
+solarCate[0].classList.add('active')
+
+solarCate.forEach(solarBtn => {
+    solarBtn.addEventListener('click',()=>{
+        //모든 카테고리 액티브 된 것 지우기
+        solarCate.forEach(item=>item.classList.remove('active'));
+        //클릭한 것만 액티브
+        solarBtn.classList.add('active')
+    })
+}) 
+
+/* ------------------ 우먼스 카테고리 컨트롤 */
+const wCate = document.querySelectorAll('.row3 .cate_btn')
+
+console.log(wCate)
+
+wCate[0].classList.add('active')
+
+wCate.forEach(wBtn => {
+    wBtn.addEventListener('click',()=>{
+        //모든 카테고리 초기화
+        wCate.forEach(witem=>witem.classList.remove('active'));
+        //클릭한 것 활성화
+        wBtn.classList.add('active')
+    })
+})
+
+
