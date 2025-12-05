@@ -192,6 +192,47 @@ header .hdr_menu .nav_wrap {
   } */
 }
 
+header:hover .header_bg_warp {
+  background: #fff;
+}
+header:hover .header_bg_warp h1 svg path {
+  fill: #212121;
+}
+header:hover .header_bg_warp .hdr_serv li svg path {
+  stroke: #212121;
+}
+header:hover .header_bg_warp .hdr_menu .hdr_etc .hdr_ect_left p {
+  color: #212121;
+}
+header:hover .header_bg_warp .hdr_menu .hdr_etc .hdr_ect_right p {
+  color: #212121;
+}
+header:hover .header_bg_warp .hdr_menu .nav_wrap {
+  /* nav .main_menu_wrap li {
+      color: #212121;
+  } */
+}
+header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu:nth-child(1) > p,
+header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu:nth-child(2) > p,
+header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu:nth-child(3) > p,
+header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu:nth-child(4) > p {
+  color: #212121 !important;
+}
+header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu:nth-child(5) > p {
+  color: #FF6600 !important;
+}
+header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu:nth-child(6) > p {
+  color: #FFBD24 !important;
+}
+header:hover .header_bg_warp .hdr_menu .hdr_ect_right::after {
+  background: rgba(33, 33, 33, 0.5);
+}
+header:hover .header_bg_warp {
+  /* .nav_wrap nav .main_menu_wrap li {
+      color: #212121;
+  } */
+}
+
 header.active .header_bg_warp {
   /* background: rgba($color: #212121, $alpha: 0.5); */
   background: #fff;
@@ -233,34 +274,6 @@ header.active .hdr_menu .hdr_ect_right::after {
 }
 header.active .header_bg_warp {
   padding: 0px 120px 0px 120px;
-}
-
-header:hover .header_bg_warp {
-  background: #fff;
-}
-header:hover .header_bg_warp h1 svg path {
-  fill: #212121;
-}
-header:hover .header_bg_warp .hdr_serv li svg path {
-  stroke: #212121;
-}
-header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap li {
-  color: #212121;
-}
-header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu:nth-child(5) > p {
-  color: #FF6600;
-}
-header:hover .header_bg_warp .hdr_menu .nav_wrap nav .main_menu_wrap .main_menu:nth-child(6) > p {
-  color: #FFBD24;
-}
-header:hover .header_bg_warp .hdr_menu p {
-  color: #212121;
-}
-header:hover .header_bg_warp .hdr_menu .hdr_ect_right::after {
-  background: rgba(33, 33, 33, 0.5);
-}
-header:hover .header_bg_warp .nav_wrap nav .main_menu_wrap li {
-  color: #212121;
 }
 
 main {
