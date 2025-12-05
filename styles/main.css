@@ -883,7 +883,16 @@ main .row4 > p {
 main .row4 #shoes .shoes_wrap .shoes_item_wrap:hover .shoes_name_wrap img {
   transform: translateX(5px);
 }
+main .row4 #shoes .shoes_wrap .shoes_item_wrap:hover span {
+  opacity: 0;
+  visibility: hidden;
+}
+main .row4 #shoes .shoes_wrap .shoes_item_wrap:hover .shoes_keyword {
+  opacity: 1;
+  visibility: visible;
+}
 main .row4 #shoes .shoes_wrap .shoes_item_wrap {
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -891,12 +900,33 @@ main .row4 #shoes .shoes_wrap .shoes_item_wrap {
   padding: 50px;
   aspect-ratio: 3/4;
 }
+main .row4 #shoes .shoes_wrap .shoes_item_wrap .shoes_keyword {
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  opacity: 0;
+  visibility: hidden;
+}
+main .row4 #shoes .shoes_wrap .shoes_item_wrap .shoes_keyword p {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
 main .row4 #shoes .shoes_wrap .shoes_item_wrap span {
+  transition: all 0.2s ease;
   font-weight: 500;
   margin-bottom: 15px;
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 main .row4 #shoes .shoes_wrap .shoes_item_wrap .shoes_name_wrap {
+  position: absolute;
+  left: 50px;
+  top: 80px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -1105,10 +1135,12 @@ main .row6 .look_book_wrap .look_book_card .lb04 {
   background-image: url(../images/row6_lookbook/lookbook_04.jpg);
 }
 main .row6 .look_book_wrap .look_book_card .look_book_item_wrap .look_book_item:first-child {
+  cursor: pointer;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(229, 229, 229, 0.6);
 }
 main .row6 .look_book_wrap .look_book_card .look_book_item_wrap .look_book_item:last-child {
+  cursor: pointer;
   padding-top: 15px;
 }
 main .row6 .look_book_wrap .look_book_card .look_book_item_wrap .look_book_item {

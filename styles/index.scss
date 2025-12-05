@@ -981,25 +981,51 @@ main {
         #shoes {
 
             .shoes_wrap {
-                .shoes_item_wrap:hover .shoes_name_wrap img{transform: translateX(5px);}
+                .shoes_item_wrap:hover .shoes_name_wrap img{
+                    transform: translateX(5px);
+                }
+                .shoes_item_wrap:hover span {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                .shoes_item_wrap:hover .shoes_keyword {opacity: 1; visibility: visible;}
                 .shoes_item_wrap {
+                    position: relative;
                     @include bg-opt;
                     cursor: pointer;
                     padding: 50px;
                     aspect-ratio: 3 / 4;
-
+                    .shoes_keyword {
+                        transition: all 0.2s ease;
+                        position: absolute;
+                        top:50px; left: 50px;
+                        display: flex;
+                        gap:10px;
+                        margin-bottom: 15px;
+                        opacity: 0;
+                        visibility: hidden;
+                        p {
+                            font-size: $font-18;
+                            font-weight: $font-sb;
+                        }
+                    }
                     span {
+                        transition: all 0.2s ease;
                         font-weight: $font-m;
                         margin-bottom: 15px;
                         display: block;
+                        opacity: 1;
+                        visibility: visible;
                     }
 
                     .shoes_name_wrap {
-                        
+                        position: absolute;
+                            left: 50px; top: 80px;
                         display: flex;
                         align-items: center;
                         gap:5px;
                         p {
+                            
                             font-size: $font-24;
                             font-weight: $font-sb;
                         }
@@ -1228,13 +1254,13 @@ main {
 
                 .look_book_item_wrap {
                     .look_book_item:first-child {
-
+                        cursor: pointer;
                         padding-bottom: 15px;
                         border-bottom: 1px solid rgba(229, 229, 229, 0.6);
                     }
 
                     .look_book_item:last-child {
-
+                        cursor: pointer;
                         padding-top: 15px;
                     }
 
