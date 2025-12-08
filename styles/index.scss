@@ -435,7 +435,170 @@ main {
                 @include c-black;
             }
         }
-
+        /* 키즈 스키웨어 */
+        .collect_kids_ski_wrap {
+            .ks1 {
+                .item_color_01 {@include c-black;}
+                .item_color_02 {@include c-blue;}
+            }
+            .ks2 {
+                .item_color_01 {@include c-beige;}
+                .item_color_02 {@include c-blue;}
+            }
+            .ks3 {
+                .item_color_01 {@include c-red;}
+                .item_color_02 {@include c-brown;}
+            }
+            .ks4 {
+                .item_color_01 {@include c-purple;}
+                .item_color_02 {@include c-nevy;}
+            }
+            .ks5 {
+                .item_color_01 {@include c-black;}
+                .item_color_02 {@include c-blue;}
+            }
+            .ks6 {
+                .item_color_01 {@include c-white;}
+                .item_color_02 {@include c-grey;}
+            }
+            .ks7 {
+                .item_color_01 {@include c-brown;}
+                .item_color_02 {@include c-blue;}
+            }
+            .ks8 {
+                .item_color_01 {@include c-white;}
+                .item_color_02 {@include c-blue;}
+            }
+        }
+        /* all 스키웨어 */
+        .collect_ski_wrap {
+            .a_ski_1 {
+                .item_color_01 {@include c-black;}
+                .item_color_02 {@include c-nevy;}
+            }
+            .a_ski_2 {
+                .item_color_01 {@include c-black;}
+                .item_color_02 {@include c-nevy;}
+            }
+            .a_ski_3 {
+                .item_color_01 {@include c-brown;}
+                .item_color_02 {@include c-nevy;}
+            }
+            .a_ski_4 {
+                .item_color_01 {@include c-black;}
+                .item_color_02 {@include c-red;}
+            }
+            .a_ski_5 {
+                .item_color_01 {@include c-black;}
+                .item_color_02 {@include c-nevy;}
+            }
+            .a_ski_6 {
+                .item_color_01 {@include c-white;}
+                .item_color_02 {@include c-nevy;}
+            }
+            .a_ski_7 {
+                .item_color_01 {@include c-black;}
+                .item_color_02 {@include c-beige;}
+            }
+            .a_ski_8 {
+                .item_color_01 {@include c-black;}
+            }
+        }
+        /* 셋업 */
+        .collect_setup_wrap {
+            .su1 {
+                .item_color_01 {@include c-white;}
+                .item_color_02 {@include c-beige;}
+            }
+            .su2 {
+                .item_color_01 {@include c-blue;}
+                .item_color_02 {@include c-brown;}
+            }
+            .su3 {
+                .item_color_01 {@include c-white;}
+                .item_color_02 {@include c-grey;}
+            }
+            .su4 {
+                .item_color_01 {@include c-black;}
+            }
+            .su5 {
+                .item_color_01 {@include c-white;}
+            }
+            .su6 {
+                .item_color_01 {@include c-purple;}
+                .item_color_02 {@include c-grey;}
+            }
+            .su7 {
+                .item_color_01 {@include c-beige;}
+                .item_color_02 {@include c-beige;}
+            }
+            .su8 {
+                .item_color_01 {@include c-blue;}
+                .item_color_02 {@include c-beige;}
+            }
+        }
+        /* cp 콜라보 */
+        .collect_cp_wrap {
+            .cp1 {
+                .item_color_01 {@include c-blue;}
+            }
+            .cp2 {
+                .item_color_01 {@include c-white;}
+                .item_color_02 {@include c-grey;}
+            }
+            .cp3 {
+                .item_color_01 {@include c-blue;}
+            }
+            .cp4 {
+                .item_color_01 {@include c-white;}
+                .item_color_02 {@include c-brown;}
+            }
+            .cp5 {
+                .item_color_01 {@include c-blue;}
+                .item_color_02 {@include c-white;}
+            }
+            .cp6 {
+                .item_color_01 {@include c-white;}
+            }
+            .cp7 {
+                .item_color_01 {@include c-blue;}
+            }
+            .cp8 {
+                .item_color_01 {@include c-white;}
+                .item_color_02 {@include c-grey;}
+            }
+        }
+        /* 연말 선물 */
+        .collect_gift_wrap {
+            .gift1 {
+                .item_color_01 {@include c-beige; }
+                .item_color_02 {@include c-black;}
+            }
+            .gift2 {
+                .item_color_01 {@include c-beige; }
+                .item_color_02 {@include c-black;}
+            }
+            .gift3 {
+                .item_color_01 {@include c-brown; }
+                .item_color_02 {@include c-black;}
+            }
+            .gift4 {
+                .item_color_01 {@include c-beige; }
+                .item_color_02 {@include c-black;}
+            }
+            .gift5 {
+                .item_color_01 {@include c-brown; }
+                .item_color_02 {@include c-black;}
+            }
+            .gift6 {
+                .item_color_01 {@include c-beige; }
+                .item_color_02 {@include c-grey;}
+            }
+            .gift7 {
+                .item_color_01 {@include c-beige; }
+                .item_color_02 {@include c-grey;}
+            }
+        }
         .item_img {
             position: relative;
 
@@ -840,6 +1003,7 @@ main {
                 width: 100%;
                 aspect-ratio: 1600 / 122;
                 background-image: url(../images/row4_collection/collection_bg_01.png);
+                @include bg-opt;
 
                 &::after {
                     mix-blend-mode: multiply;
@@ -869,6 +1033,7 @@ main {
                         color: $color-white;
                         font-size: $font-30;
                         margin-bottom: 30px;
+                        font-weight: $font-m;
                     }
                 }
 
@@ -885,6 +1050,7 @@ main {
                     .cate_btn:hover,  .cate_btn.active {
                         background-color: #fff;
                         color:$color-black;
+                        font-weight: $font-m;
                     }
                     
                 }
@@ -894,14 +1060,14 @@ main {
                 }
             }
 
-            #collect_women {
+            .collection_slide {
 
                 position: relative;
                 flex: 1;
                 min-width: 0;
                 max-width: 100%;
 
-                .collect_women_wrap {
+                .swiper-wrapper {
                     .collect_wrap {
 
                         .item_img {
@@ -959,11 +1125,11 @@ main {
             }
         }
 
-        #collect_women:hover .swiper-button-prev {
+        .collection_slide:hover .swiper-button-prev {
             opacity: 1;
         }
 
-        #collect_women:hover .swiper-button-next {
+        .collection_slide:hover .swiper-button-next {
             opacity: 1;
         }
     }

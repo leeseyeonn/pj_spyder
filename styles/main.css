@@ -455,6 +455,469 @@ main section .sc6 .item_color_02 {
   border-radius: 10px;
   background-color: #464646;
 }
+main section {
+  /* 키즈 스키웨어 */
+}
+main section .collect_kids_ski_wrap .ks1 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_kids_ski_wrap .ks1 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_kids_ski_wrap .ks2 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_kids_ski_wrap .ks2 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_kids_ski_wrap .ks3 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FF7256;
+}
+main section .collect_kids_ski_wrap .ks3 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #5E3E0A;
+}
+main section .collect_kids_ski_wrap .ks4 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #6D4ACD;
+}
+main section .collect_kids_ski_wrap .ks4 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #0C093A;
+}
+main section .collect_kids_ski_wrap .ks5 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_kids_ski_wrap .ks5 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_kids_ski_wrap .ks6 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_kids_ski_wrap .ks6 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section .collect_kids_ski_wrap .ks7 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #5E3E0A;
+}
+main section .collect_kids_ski_wrap .ks7 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_kids_ski_wrap .ks8 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_kids_ski_wrap .ks8 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section {
+  /* all 스키웨어 */
+}
+main section .collect_ski_wrap .a_ski_1 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_ski_wrap .a_ski_1 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #0C093A;
+}
+main section .collect_ski_wrap .a_ski_2 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_ski_wrap .a_ski_2 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #0C093A;
+}
+main section .collect_ski_wrap .a_ski_3 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #5E3E0A;
+}
+main section .collect_ski_wrap .a_ski_3 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #0C093A;
+}
+main section .collect_ski_wrap .a_ski_4 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_ski_wrap .a_ski_4 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FF7256;
+}
+main section .collect_ski_wrap .a_ski_5 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_ski_wrap .a_ski_5 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #0C093A;
+}
+main section .collect_ski_wrap .a_ski_6 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_ski_wrap .a_ski_6 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #0C093A;
+}
+main section .collect_ski_wrap .a_ski_7 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_ski_wrap .a_ski_7 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_ski_wrap .a_ski_8 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section {
+  /* 셋업 */
+}
+main section .collect_setup_wrap .su1 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_setup_wrap .su1 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_setup_wrap .su2 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_setup_wrap .su2 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #5E3E0A;
+}
+main section .collect_setup_wrap .su3 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_setup_wrap .su3 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section .collect_setup_wrap .su4 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_setup_wrap .su5 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_setup_wrap .su6 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #6D4ACD;
+}
+main section .collect_setup_wrap .su6 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section .collect_setup_wrap .su7 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_setup_wrap .su7 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_setup_wrap .su8 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_setup_wrap .su8 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section {
+  /* cp 콜라보 */
+}
+main section .collect_cp_wrap .cp1 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_cp_wrap .cp2 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_cp_wrap .cp2 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section .collect_cp_wrap .cp3 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_cp_wrap .cp4 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_cp_wrap .cp4 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #5E3E0A;
+}
+main section .collect_cp_wrap .cp5 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_cp_wrap .cp5 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_cp_wrap .cp6 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_cp_wrap .cp7 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #3B469D;
+}
+main section .collect_cp_wrap .cp8 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #F2f2f2;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_cp_wrap .cp8 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section {
+  /* 연말 선물 */
+}
+main section .collect_gift_wrap .gift1 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_gift_wrap .gift1 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_gift_wrap .gift2 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_gift_wrap .gift2 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_gift_wrap .gift3 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #5E3E0A;
+}
+main section .collect_gift_wrap .gift3 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_gift_wrap .gift4 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_gift_wrap .gift4 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_gift_wrap .gift5 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #5E3E0A;
+}
+main section .collect_gift_wrap .gift5 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .collect_gift_wrap .gift6 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_gift_wrap .gift6 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section .collect_gift_wrap .gift7 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .collect_gift_wrap .gift7 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
 main section .item_img {
   position: relative;
 }
@@ -785,6 +1248,9 @@ main .row3 .collection_wrap .title_wrap {
   width: 100%;
   aspect-ratio: 1600/122;
   background-image: url(../images/row4_collection/collection_bg_01.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 main .row3 .collection_wrap .title_wrap::after {
   mix-blend-mode: multiply;
@@ -811,6 +1277,7 @@ main .row3 .collection_wrap .title_wrap .collection_name p {
   color: #fff;
   font-size: 1.875rem;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 main .row3 .collection_wrap .title_wrap .cate_btn_wrap {
   position: relative;
@@ -826,21 +1293,22 @@ main .row3 .collection_wrap .title_wrap .cate_btn_wrap .cate_btn {
 main .row3 .collection_wrap .title_wrap .cate_btn_wrap .cate_btn:hover, main .row3 .collection_wrap .title_wrap .cate_btn_wrap .cate_btn.active {
   background-color: #fff;
   color: #333;
+  font-weight: 500;
 }
 main .row3 .collection_wrap .title_wrap .cate_btn_wrap .cate_btn:last-child {
   margin: 0 !important;
 }
-main .row3 .collection_wrap #collect_women {
+main .row3 .collection_wrap .collection_slide {
   position: relative;
   flex: 1;
   min-width: 0;
   max-width: 100%;
 }
-main .row3 .collection_wrap #collect_women .collect_women_wrap .collect_wrap .item_img img {
+main .row3 .collection_wrap .collection_slide .swiper-wrapper .collect_wrap .item_img img {
   width: 100%;
 }
-main .row3 .collection_wrap #collect_women .swiper-button-prev,
-main .row3 .collection_wrap #collect_women .swiper-button-next {
+main .row3 .collection_wrap .collection_slide .swiper-button-prev,
+main .row3 .collection_wrap .collection_slide .swiper-button-next {
   border: 0.5px solid rgba(180, 180, 180, 0.5) !important;
   background: rgba(255, 255, 255, 0.2) !important;
   transition: opacity 0.3s ease;
@@ -853,31 +1321,31 @@ main .row3 .collection_wrap #collect_women .swiper-button-next {
   background: #fff;
   top: 45%;
 }
-main .row3 .collection_wrap #collect_women .swiper-button-prev svg,
-main .row3 .collection_wrap #collect_women .swiper-button-next svg {
+main .row3 .collection_wrap .collection_slide .swiper-button-prev svg,
+main .row3 .collection_wrap .collection_slide .swiper-button-next svg {
   width: 70%;
   height: 70%;
   color: #333;
 }
-main .row3 .collection_wrap #collect_women .swiper-button-prev {
+main .row3 .collection_wrap .collection_slide .swiper-button-prev {
   left: 15px;
 }
-main .row3 .collection_wrap #collect_women .swiper-button-next {
+main .row3 .collection_wrap .collection_slide .swiper-button-next {
   right: 15px;
 }
-main .row3 .collection_wrap #collect_women .swiper-scrollbar .swiper-scrollbar-drag {
+main .row3 .collection_wrap .collection_slide .swiper-scrollbar .swiper-scrollbar-drag {
   background: #999;
 }
-main .row3 .collection_wrap #collect_women .swiper-scrollbar {
+main .row3 .collection_wrap .collection_slide .swiper-scrollbar {
   height: 2px;
   width: 95%;
   bottom: 17px;
   left: 0;
 }
-main .row3 #collect_women:hover .swiper-button-prev {
+main .row3 .collection_slide:hover .swiper-button-prev {
   opacity: 1;
 }
-main .row3 #collect_women:hover .swiper-button-next {
+main .row3 .collection_slide:hover .swiper-button-next {
   opacity: 1;
 }
 main {
