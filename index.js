@@ -58,6 +58,7 @@ const row2Bnr = new Swiper('#solarcore_all', {
 })
 
 
+
 /* ------------------------------------- 콜렉션 */
 /* women */
 
@@ -249,19 +250,63 @@ window.addEventListener("load", checkScroll);
 /* -------------------------- 솔라코어 카데고리 컨트롤 */
 
 const solarCate = document.querySelectorAll('.row2 .cate_btn')
+const solarWrap = document.querySelector('.solarcore_wrap')
+const solarCard = solarWrap.querySelectorAll('.item_wrap') //solarcore_wrap의 자식들. 얘네들은 모두 item_wrap 이라는 공통 클래스를 가지고 있음
 
-console.log(solarCate)
-
+//초기값
 solarCate[0].classList.add('active')
 
-solarCate.forEach(solarBtn => {
-    solarBtn.addEventListener('click',()=>{
+console.log(solarCard)
+
+solarCate.forEach((btn,index)=>{
+    console.log(index, btn);
+    //클릭하면
+    btn.addEventListener('click',()=>{
         //모든 카테고리 액티브 된 것 지우기
-        solarCate.forEach(item=>item.classList.remove('active'));
-        //클릭한 것만 액티브
-        solarBtn.classList.add('active')
+        solarCard.forEach(card=>card.classList.remove('active'));
+        solarCate.forEach(item=>item.classList.remove('active'))
+        //클릭 한 것만 액티브
+        btn.classList.add('active')
+        //조건1) 근데 그 클릭 한 것이 배열1 번째 버튼이면 이걸 실행하는데 그게 뭐냐면 (men)
+        if (index === 1) {
+            //solarCard 중에 클래스 이름이
+            solarCard.forEach(card => {
+                //srw_w 들어간거면
+                if (card.classList.contains('scr_w')){
+                    //srw_w가 액티브 해라
+                    card.classList.add('active')
+                }
+            })
+            //조건1) 근데 그 클릭 한 것이 배열1 번째 버튼이면 이걸 실행하는데 그게 뭐냐면 (women)
+        } else if (index === 2) {
+            //solarCard 중에 클래스 이름이
+            solarCard.forEach(card => {
+                //srw_m 들어간거면
+                if (card.classList.contains('scr_m')){
+                    //srw_m가 액티브 해라
+                    card.classList.add('active')
+                }
+            })
+        } else {
+            //만약 다 아니라면 초기값 상태로 돌아가라
+            solarCate[0].classList.add('active')
+            solarCard.forEach(card=>card.classList.remove('active'));
+        }
+        
+        // Swiper 레이아웃 재계산하여 여백 제거 (loop 모드 유지)
+        setTimeout(() => {
+            row2Bnr.updateSlides();
+            row2Bnr.update();
+        }, 0);
     })
-}) 
+})
+
+
+
+
+
+
+
 
 /* ------------------ 우먼스 카테고리 컨트롤 */
 /* const wCate = document.querySelectorAll('.row3 .cate_btn')

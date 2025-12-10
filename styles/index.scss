@@ -294,6 +294,8 @@ main {
     }
 
     section {
+        .scr_m.active {display: none;}
+        .scr_w.active {display: none;} 
         .shop_btn {
             &:hover {
                 svg {
@@ -368,6 +370,39 @@ main {
         .scr7 {
             .item_color_01 {
                 @include c-grey;
+            }
+
+            .item_color_02 {
+                @include c-black;
+            }
+        }
+        .scr13 {
+            .item_color_01 {
+                @include c-grey;
+            }
+
+        }
+        .scr10 {
+            .item_color_01 {
+                @include c-grey;
+            }
+
+            .item_color_02 {
+                @include c-brown;
+            }
+        }
+        .scr11 {
+            .item_color_01 {
+                @include c-grey;
+            }
+
+            .item_color_02 {
+                @include c-beige
+            }
+        }
+        .scr12 {
+            .item_color_01 {
+                @include c-beige
             }
 
             .item_color_02 {
@@ -928,7 +963,7 @@ main {
                             }
                         }
                     }
-
+                    
                 }
 
                 .swiper-button-prev,

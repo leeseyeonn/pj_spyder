@@ -282,6 +282,12 @@ main {
 main section:first-child {
   margin-bottom: 80px;
 }
+main section .scr_m.active {
+  display: none;
+}
+main section .scr_w.active {
+  display: none;
+}
 main section .shop_btn:hover svg {
   transform: translateX(5px);
 }
@@ -371,6 +377,50 @@ main section .scr7 .item_color_01 {
   background-color: #666;
 }
 main section .scr7 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #464646;
+}
+main section .scr13 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section .scr10 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section .scr10 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #5E3E0A;
+}
+main section .scr11 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #666;
+}
+main section .scr11 .item_color_02 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .scr12 .item_color_01 {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background-color: #FCFBF0;
+  border: 0.3px solid #B4B4B4;
+}
+main section .scr12 .item_color_02 {
   width: 13px;
   height: 13px;
   border-radius: 10px;
