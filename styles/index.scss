@@ -772,16 +772,19 @@ main {
                 }
 
                 .bannr_img_001 {
+                    background-position: right !important;
                     @include bg-opt;
                     background-image: url(../images/row1_main_bnr/main_bnr_001.jpg)
                 }
 
                 .bannr_img_002 {
+                    background-position: right !important;
                     @include bg-opt;
                     background-image: url(../images/row1_main_bnr/main_bnr_002.jpg)
                 }
 
                 .bannr_img_003 {
+                    background-position: right !important;
                     @include bg-opt;
                     background-image: url(../images/row1_main_bnr/main_bnr_003.jpg)
                 }
@@ -839,10 +842,10 @@ main {
 
     /* 신상품 (솔라코어) */
     .row2 {
+        max-width: 100%;
         display: flex;
         gap: 40px;
         padding: 0 120px;
-
         .banner_img {
             position: relative;
             text-align: center;
@@ -1212,6 +1215,7 @@ main {
                         }
                     }
                     span {
+                        line-height: $line-height-120;
                         transition: all 0.2s ease;
                         font-weight: $font-m;
                         margin-bottom: 15px;
@@ -1290,6 +1294,8 @@ main {
 
     /* 중간 배너 */
     .row5 {
+        background-position: center;
+        background-size: cover;
         background-image: url(../images/row5_middle_bnr/middle_bnr.jpg);
         width: 100%;
         aspect-ratio: 1920/150;
@@ -1345,12 +1351,12 @@ main {
         }
 
         .look_book_wrap {
-            display: flex;
+            /* display: flex;
             gap: 20px;
-            flex-flow: row nowrap;
+            flex-flow: row nowrap; */
             .look_book_card {
-                flex: 0 1 calc((100% - 20px * 3) / 4);
-                min-width: 0;
+                /* flex: 0 1 calc((100% - 20px * 3) / 4);
+                min-width: 0; */
                 .main_title {
                     
                 }

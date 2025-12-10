@@ -44,8 +44,8 @@ function startProgress() {
 
 /* solorcore - all */
 const row2Bnr = new Swiper('#solarcore_all', { 
-    slidesPerView:3.8,
-    spaceBetween: 20,
+    slidesPerView:2.8,
+    spaceBetween: 10,
     loop:true,
     navigation: {
         nextEl: ".solarcore_next",
@@ -55,6 +55,12 @@ const row2Bnr = new Swiper('#solarcore_all', {
         el: "#solarcore_all .swiper-scrollbar",
         /* hide: true, */
     },
+    breakpoints :{
+        1024:{
+            slidesPerView:3.8,
+            spaceBetween: 20,
+        }
+    }
 })
 
 
@@ -63,8 +69,8 @@ const row2Bnr = new Swiper('#solarcore_all', {
 /* women */
 
 const row3Bnr = new Swiper('#collect_women', { 
-    slidesPerView:5.3,
-    spaceBetween: 20,
+    slidesPerView:3.5,
+    spaceBetween: 10,
     loop:true,
     navigation: {
         nextEl: "#collect_women .swiper-button-next",
@@ -72,15 +78,20 @@ const row3Bnr = new Swiper('#collect_women', {
     },
     scrollbar: {
         el: "#collect_women .swiper-scrollbar",
-
     },
+    breakpoints :{
+        1024:{
+            slidesPerView:5.8,
+            spaceBetween: 20,
+        }
+    }
 })
 
 /* 아동 스키 */
 
 const kidsSki = new Swiper('#collect_kids_ski', { 
-    slidesPerView:5.3,
-    spaceBetween: 20,
+    slidesPerView:3.5,
+    spaceBetween: 10,
     loop:true,
     navigation: {
         nextEl: "#collect_kids_ski .swiper-button-next",
@@ -88,14 +99,19 @@ const kidsSki = new Swiper('#collect_kids_ski', {
     },
     scrollbar: {
         el: "#collect_kids_ski .swiper-scrollbar",
-
     },
+    breakpoints :{
+        1024:{
+            slidesPerView:5.8,
+            spaceBetween: 20,
+        }
+    }
 })
 
 /* 스키 모음 */
 const aSki = new Swiper('#collect_ski', { 
-    slidesPerView:5.3,
-    spaceBetween: 20,
+    slidesPerView:3.5,
+    spaceBetween: 10,
     loop:true,
     navigation: {
         nextEl: "#collect_ski .swiper-button-next",
@@ -103,15 +119,20 @@ const aSki = new Swiper('#collect_ski', {
     },
     scrollbar: {
         el: "#collect_ski .swiper-scrollbar",
-
     },
+    breakpoints :{
+        1024:{
+            slidesPerView:5.8,
+            spaceBetween: 20,
+        }
+    }
 })
 
 
 /* 셋업 */
 const setUp = new Swiper('#collect_setup', { 
-    slidesPerView:5.3,
-    spaceBetween: 20,
+    slidesPerView:3.5,
+    spaceBetween: 10,
     loop:true,
     navigation: {
         nextEl: "#collect_setup .swiper-button-next",
@@ -119,15 +140,20 @@ const setUp = new Swiper('#collect_setup', {
     },
     scrollbar: {
         el: "#collect_setup .swiper-scrollbar",
-
     },
+    breakpoints :{
+        1024:{
+            slidesPerView:5.8,
+            spaceBetween: 20,
+        }
+    }
 })
 
 
 /* cp */
 const cpCollab = new Swiper('#collect_cp', { 
-    slidesPerView:5.3,
-    spaceBetween: 20,
+    slidesPerView:3.5,
+    spaceBetween: 10,
     loop:true,
     navigation: {
         nextEl: "#collect_cp .swiper-button-next",
@@ -135,14 +161,19 @@ const cpCollab = new Swiper('#collect_cp', {
     },
     scrollbar: {
         el: "#collect_cp .swiper-scrollbar",
-
     },
+    breakpoints :{
+        1024:{
+            slidesPerView:5.8,
+            spaceBetween: 20,
+        }
+    }
 })
 
 /* 연말 선물 */
 const endGift = new Swiper('#collect_gift', { 
-    slidesPerView:5.3,
-    spaceBetween: 20,
+    slidesPerView:3.5,
+    spaceBetween: 10,
     loop:true,
     navigation: {
         nextEl: "#collect_gift .swiper-button-next",
@@ -150,8 +181,13 @@ const endGift = new Swiper('#collect_gift', {
     },
     scrollbar: {
         el: "#collect_gift .swiper-scrollbar",
-
     },
+    breakpoints :{
+        1024:{
+            slidesPerView:5.8,
+            spaceBetween: 20,
+        }
+    }
 })
 
 
@@ -173,13 +209,19 @@ const endGift = new Swiper('#collect_gift', {
 /* ------------------------------------- 신발 */
 
 const row4Bnr = new Swiper('#shoes', { 
-    slidesPerView:4.2,
-    spaceBetween: 20,
+    slidesPerView:3.1,
+    spaceBetween: 10,
     /* loop:true, */
     navigation: {
         nextEl: "#shoes .swiper-button-next",
         prevEl: "#shoes .swiper-button-prev",
     },
+    breakpoints :{
+        1024:{
+            slidesPerView:4.2,
+            spaceBetween: 20,
+        }
+    }
 })
 
 /* ------------------------------------- 이글스 */
@@ -401,3 +443,17 @@ collectBtns.forEach(btn => {
 
 // 초기화 실행
 initCollection()
+
+/* ------------------ 룩북 */
+
+/* 셋업 */
+const lookBook = new Swiper('#look_book', { 
+    slidesPerView:3.2,
+    spaceBetween: 20,
+    breakpoints :{
+        1024:{
+            slidesPerView:4,
+            spaceBetween: 20,
+        }
+    }
+})

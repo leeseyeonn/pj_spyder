@@ -1078,18 +1078,21 @@ main .row1 #main_banner .main_banner_wrap .bannr_img .bnr_text_wrap .bnr_btn:hov
   border: 0.5px solid #fff;
 }
 main .row1 #main_banner .main_banner_wrap .bannr_img_001 {
+  background-position: right !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-image: url(../images/row1_main_bnr/main_bnr_001.jpg);
 }
 main .row1 #main_banner .main_banner_wrap .bannr_img_002 {
+  background-position: right !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-image: url(../images/row1_main_bnr/main_bnr_002.jpg);
 }
 main .row1 #main_banner .main_banner_wrap .bannr_img_003 {
+  background-position: right !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1147,6 +1150,7 @@ main {
   /* 신상품 (솔라코어) */
 }
 main .row2 {
+  max-width: 100%;
   display: flex;
   gap: 40px;
   padding: 0 120px;
@@ -1445,6 +1449,7 @@ main .row4 #shoes .shoes_wrap .shoes_item_wrap .shoes_keyword p {
   font-weight: 600;
 }
 main .row4 #shoes .shoes_wrap .shoes_item_wrap span {
+  line-height: 120%;
   transition: all 0.2s ease;
   font-weight: 500;
   margin-bottom: 15px;
@@ -1514,6 +1519,8 @@ main {
   /* 중간 배너 */
 }
 main .row5 {
+  background-position: center;
+  background-size: cover;
   background-image: url(../images/row5_middle_bnr/middle_bnr.jpg);
   width: 100%;
   aspect-ratio: 1920/150;
@@ -1562,13 +1569,13 @@ main .row6 h3 {
   margin-bottom: 20px;
 }
 main .row6 .look_book_wrap {
-  display: flex;
+  /* display: flex;
   gap: 20px;
-  flex-flow: row nowrap;
+  flex-flow: row nowrap; */
 }
 main .row6 .look_book_wrap .look_book_card {
-  flex: 0 1 calc((100% - 60px) / 4);
-  min-width: 0;
+  /* flex: 0 1 calc((100% - 20px * 3) / 4);
+  min-width: 0; */
 }
 main .row6 .look_book_wrap .look_book_card .look_book_bg {
   margin-bottom: 15px;
@@ -2256,8 +2263,170 @@ footer .ftr_right .box3 ul li:not(:first-child):hover {
 }
 
 @media screen and (max-width: 1024px) {
-  body {
-    background: beige;
+  body h3 {
+    font-size: 1.625rem !important;
+    margin-bottom: 5px !important;
+  }
+  header .header_bg_warp {
+    padding: 20px 20px 0px 20px;
+  }
+  header .header_bg_warp h1 svg {
+    width: 60%;
+  }
+  header .header_bg_warp h1 {
+    top: 55px;
+    left: 45px;
+    height: fit-content;
+  }
+  header .header_bg_warp .hdr_menu .hdr_etc {
+    display: none;
+  }
+  header .header_bg_warp .nav_wrap {
+    align-items: center;
+  }
+  header.active .header_bg_warp {
+    padding: 0px 20px 0px 20px;
+  }
+  header.active .header_bg_warp h1 {
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    left: 45px;
+    top: 40px;
+  }
+  header.active .header_bg_warp h1 svg {
+    width: 60%;
+  }
+  header.active .header_bg_warp h1 svg path {
+    fill: #212121;
+  }
+  main .row2 {
+    gap: 20px;
+    padding: 0 20px;
+    flex-flow: column;
+  }
+  main .row2 .banner_img {
+    height: auto;
+    aspect-ratio: 480/150;
+    max-width: 100%;
+    background-position-y: -160px;
+  }
+  main .row2 .new_item_wrap {
+    max-width: 100%;
+  }
+  main .row2 .new_item_wrap .title_wrap {
+    margin-bottom: 20px;
+  }
+  main .row2 .new_item_wrap .title_wrap h3 {
+    width: 100%;
+    text-align: left !important;
+    font-size: 1.625rem;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  main .row2 .new_item_wrap .text_wrap .cate_btn_wrap {
+    gap: 10px;
+  }
+  main .row2 .new_item_wrap .text_wrap .cate_btn_wrap button {
+    font-size: 1rem !important;
+  }
+  main .row3 {
+    padding: 0 20px;
+  }
+  main .row3 .collection_wrap .title_wrap {
+    padding: 20px 0;
+  }
+  main .row3 .collection_wrap .title_wrap .collection_name p {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  main .row3 .collection_wrap .title_wrap .cate_btn_wrap .cate_btn {
+    padding: 8px 12px;
+    margin-right: 5px;
+    font-size: 0.875rem;
+  }
+  main .row4 {
+    padding-left: 20px;
+  }
+  main .row4 > p {
+    margin-bottom: 20px;
+  }
+  main .row4 #shoes .shoes_wrap .shoes_item_wrap {
+    padding: 30px;
+  }
+  main .row4 #shoes .shoes_wrap .shoes_item_wrap .shoes_keyword {
+    left: 30px;
+    top: 30px;
+  }
+  main .row4 #shoes .shoes_wrap .shoes_item_wrap .shoes_name_wrap {
+    left: 30px;
+    top: 70px;
+  }
+  main .row5 {
+    padding: 20px 40px;
+  }
+  main .row5 .left {
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    margin-right: 80px;
+  }
+  main .row5 .left p:first-child {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+  }
+  main .row5 .left p:last-child {
+    margin-left: 5px;
+    font-size: 1.5rem;
+  }
+  main .row5 .right p:last-child {
+    text-shadow: 0px 0px 10px black;
+    font-size: 1.5rem;
+  }
+  main .row6 {
+    padding: 0 20px;
+  }
+  main .row6 .look_book_wrap .look_book_card .look_book_bg .main_title {
+    font-size: 1rem;
+  }
+  main .row7 {
+    flex-flow: column;
+    padding: 0 20px;
+  }
+  main .row7 .title_wrap {
+    margin-bottom: 20px !important;
+  }
+  main .row7 .title_wrap .btn_wrap {
+    margin-bottom: 0 !important;
+  }
+  main .row7 .eagles_wrap {
+    max-width: 100%;
+  }
+  main .row7 #eagles_bnr {
+    display: none;
+  }
+  main .row8 iframe {
+    display: none;
+  }
+  main .row8 .big_punch_wrap .title_wrap {
+    margin-bottom: 20px !important;
+  }
+  main .row8 .big_punch_wrap .title_wrap .btn_wrap {
+    margin-bottom: 0 !important;
+  }
+  main .row8 .big_punch_wrap {
+    max-width: 100%;
+  }
+  main .row8 {
+    padding: 50px 20px;
+  }
+  main .row9 {
+    padding: 0 20px;
+  }
+  footer {
+    padding: 50px 20px;
+  }
+  footer .box3 {
+    gap: 50px !important;
   }
 }
 

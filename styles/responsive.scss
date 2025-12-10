@@ -2,6 +2,196 @@
 
 @media screen and (max-width:1024px){
     body {
-        background: beige;
+        
+        h3 {
+            font-size:$font-26 !important ;
+            margin-bottom: 5px !important ;
+        }
+    }
+    header {
+        .header_bg_warp {
+            padding: 20px 20px 0px 20px;
+            h1 {
+                svg {
+                    width: 60%;
+                }
+                top:55px; left: 45px;
+                height: fit-content;
+            }
+            .hdr_menu .hdr_etc {
+                display: none;
+            }
+            .nav_wrap {
+                align-items: center;
+            }
+        }
+        
+    }
+    header.active {
+        .header_bg_warp {
+            padding: 0px 20px 0px 20px;
+            h1 {
+                transform:translate(-50%, -50%);
+                height: fit-content;
+                left: 45px;
+                top: 40px;
+                svg {
+                    width: 60%;
+                    path {
+                        fill: #212121;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        
+        .row2 {
+            gap:20px;
+            padding: 0 20px;
+            flex-flow: column;
+            .banner_img {
+                height: auto;            // height: 100% 제거 효과
+                aspect-ratio: 480 / 150; // 높이 확보 (또는 min-height: 320px 등)
+                max-width: 100%; 
+                background-position-y: -160px;
+            }
+            .new_item_wrap {
+                max-width: 100%;
+                .title_wrap {
+                    margin-bottom: 20px;
+                    h3 {
+                        width: 100%;
+                        text-align: left !important;
+                        font-size:$font-26;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    }
+                }
+                .text_wrap {
+                    .cate_btn_wrap {
+                        gap:10px;
+                        button {
+                            font-size: $font-16 !important;
+                        }
+                    }
+                }
+            }
+
+        }
+        .row3 {
+            padding: 0 20px;
+            .collection_wrap .title_wrap {
+                padding: 20px 0;
+            }
+            .collection_wrap .title_wrap .collection_name  {
+                span {}
+                p {
+                    margin-bottom: 10px;
+                    font-size: $font-24;
+                }
+            }
+            .collection_wrap .title_wrap .cate_btn_wrap .cate_btn {
+                padding: 8px 12px;
+                margin-right: 5px;
+                font-size: $font-14;
+            }
+
+        }
+        .row4 {
+            padding-left: 20px;
+            >p {
+                margin-bottom: 20px;
+            }
+            #shoes .shoes_wrap .shoes_item_wrap {
+                span {
+                    
+                }
+                padding: 30px;
+            }
+            #shoes .shoes_wrap .shoes_item_wrap .shoes_keyword {
+                left: 30px;
+                top: 30px;
+            }
+            #shoes .shoes_wrap .shoes_item_wrap .shoes_name_wrap {
+                left: 30px;
+                top: 70px;
+            }
+        }
+        .row5 {
+            padding: 20px 40px;
+            .left {
+                margin-bottom: 10px;
+                align-items: center;
+                display: flex;
+                margin-right: 80px;
+                p:first-child {
+                    font-size: $font-24;
+                    margin-bottom: 0px;
+                }
+                p:last-child {
+                    margin-left: 5px;
+                    font-size: $font-24;
+                }
+            }
+            .right {
+                p:last-child {
+                    text-shadow: 0px 0px 10px black;
+                    font-size: $font-24;
+                }
+            }
+        }
+        .row6 {
+            padding: 0 20px;
+            
+            .look_book_wrap .look_book_card .look_book_bg .main_title {
+                font-size: $font-16;
+            }
+
+        }
+        .row7 {
+            
+            flex-flow: column;
+            padding: 0 20px;
+            .title_wrap {
+                margin-bottom: 20px !important;
+                .btn_wrap {
+                    margin-bottom: 0 !important;
+                }
+                
+            }
+            .eagles_wrap {
+                max-width: 100%;
+            }
+            #eagles_bnr {
+                display: none;
+            }
+        }
+        .row8 {
+            iframe {
+                display: none;
+            }
+            .big_punch_wrap {
+                .title_wrap {
+                    margin-bottom: 20px !important;
+                    .btn_wrap {
+                        margin-bottom: 0 !important;
+                    }
+                    
+                }
+                max-width: 100%;
+            }
+            padding: 50px 20px;
+        }
+        .row9 {
+            padding: 0 20px;
+        }
+        
+    }
+    footer {
+        padding: 50px 20px;
+        .box3 {
+            gap: 50px !important; 
+        }
     }
 }
