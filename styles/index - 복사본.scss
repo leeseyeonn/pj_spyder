@@ -842,10 +842,12 @@ main {
         display: flex;
         gap: 40px;
         padding: 0 120px;
+        align-items: stretch;
 
         .banner_img {
             position: relative;
             text-align: center;
+            height: 100%;
             flex: 0 0 25%;
             max-width: 25%;
 

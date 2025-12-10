@@ -1150,12 +1150,10 @@ main .row2 {
   display: flex;
   gap: 40px;
   padding: 0 120px;
-  align-items: flex-end;
 }
 main .row2 .banner_img {
   position: relative;
   text-align: center;
-  aspect-ratio: 480/650;
   flex: 0 0 25%;
   max-width: 25%;
   background-image: url(../images/row2_new_items/insta_09.jpg);
@@ -1566,9 +1564,11 @@ main .row6 h3 {
 main .row6 .look_book_wrap {
   display: flex;
   gap: 20px;
+  flex-flow: row nowrap;
 }
 main .row6 .look_book_wrap .look_book_card {
-  flex: 0 0 calc((100% - 60px) / 4);
+  flex: 0 1 calc((100% - 60px) / 4);
+  min-width: 0;
 }
 main .row6 .look_book_wrap .look_book_card .look_book_bg {
   margin-bottom: 15px;
@@ -2253,6 +2253,12 @@ footer .ftr_right .box3 ul li:not(:first-child) {
 }
 footer .ftr_right .box3 ul li:not(:first-child):hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background: beige;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
