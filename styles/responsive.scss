@@ -18,7 +18,7 @@
                 top:55px; left: 45px;
                 height: fit-content;
             }
-            .hdr_menu .hdr_etc {
+            .pc_hdr_menu .hdr_etc {
                 display: none;
             }
             .nav_wrap {
@@ -34,7 +34,7 @@
                 transform:translate(-50%, -50%);
                 height: fit-content;
                 left: 45px;
-                top: 40px;
+                top: 38px;
                 svg {
                     width: 60%;
                     path {
@@ -192,6 +192,195 @@
         padding: 50px 20px;
         .box3 {
             gap: 50px !important; 
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    body {
+
+    }
+    header {
+        .header_bg_warp {
+            padding:20px 20px;
+            h1 {top:38px;}
+            .pc_hdr_menu {
+                .nav_wrap {
+                    .hdr_serv {
+                        gap:15px;
+                    }
+                    .m_nav {
+                        transform: translateX(0);
+                        
+                        /* display: block; */
+                    }
+                    .pc_nav {
+                        display: none;
+                        /* background-color: $color-white;
+                        position: absolute;
+                        top:67px; left: 0;
+                        @include check1; */
+                        .main_menu_wrap {
+                            
+                        }
+                    }
+                    .hdr_serv {
+                        .mypage {
+                            display: none;
+                        }
+                        .m_menu {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    header.active {
+        .header_bg_warp {padding: 20px 20px;}
+        
+    }
+    main {
+        .row1 {
+            #main_banner{
+                height: 70vh;
+                .main_banner_wrap {
+
+                    .bannr_img {
+                        padding: 20px;
+                        .bnr_text_wrap {
+                            .bnr_btn {
+                                display: none;
+                            }
+                        }
+                        h2{
+                            font-size: $font-30 !important;
+                        }
+                        p {
+                            font-size:$font-16 !important;
+                        }
+                    }
+                }
+                .row1_pg {
+                    top:calc(70vh - 65px); left: calc(100% - 60px);
+                }
+                .progress-bar {
+                    display: none;
+                }
+                .row1_pr_btn, .row1_ne_btn {
+                    display: none;
+                }
+            }
+            #main_banner .swiper-slide-active::after {
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 60%);
+            }
+        }
+        .row2 {
+            .banner_img {
+                display: none;
+            }
+            .new_item_wrap {
+                .title_wrap {
+                    .cate_btn_wrap {
+                        justify-content: space-between;
+                        margin: 15px 0 10px 0;
+                    }
+                    .text_wrap {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .row3 {
+            .title_wrap {
+                span,
+                p {text-align: left;}
+                .cate_btn_wrap {
+                    .cate_btn {
+                        float: left;
+                        padding: 2px !important;
+                        border: none !important;
+                    }
+                }
+            }
+        }
+        .row4 {
+            #shoes {
+                .shoes_wrap {
+                    .shoes_item_wrap {
+                        padding: 15px;
+                    }
+                }
+            }
+            #shoes .shoes_wrap .shoes_item_wrap .shoes_keyword {
+                left: 15px;
+                display: flex;
+                flex-flow: column;
+                gap:5px;
+                top: 15px;
+                p {
+                    font-size: $font-16;
+                }
+            }
+            #shoes .shoes_wrap .shoes_item_wrap .shoes_name_wrap {
+                left: 15px;
+                top: 60px;
+                p {
+                    font-size: $font-18;
+                }
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+        .row5 {
+            align-items: flex-end !important;
+            .left {
+                p {
+                    white-space: nowrap;
+                    font-size: $font-16 !important;
+                }
+            }
+            .right {
+                margin: 0 !important;
+                p:first-child {
+                    font-size: $font-16 !important;
+                }
+                p:last-child {
+                    font-size: $font-18 !important;
+                }
+            }
+        }
+        .row9 {
+            .title_wrap {
+                margin-bottom: 5px !important;
+            }
+            .inst_wrap {
+                .insta_row1 {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr); /* 2열 */
+                    gap: 10px; /* 카드 사이 간격 */
+                    width: 100%;    
+                    grid-auto-rows: auto;
+                }
+                .insta_row1 li.if_more.active {
+                    display: block;
+                } 
+                .insta_row1 li.if_more {
+                    display: none;
+                }
+            }
+            
+        }
+    }
+    footer {
+        display: block;
+        .ftr_right {
+            margin-top: 30px;
+            .notice,.box3 {
+                display: none;
+            }
         }
     }
 }

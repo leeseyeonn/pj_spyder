@@ -41,7 +41,7 @@ header {
         }
     }
 
-    .hdr_menu {
+    .pc_hdr_menu {
         display: flex;
         flex-flow: column nowrap;
         gap: 35px;
@@ -86,8 +86,364 @@ header {
                 width: 92px;
                 height: 25px;
             }
+            .m_nav {
+                padding-top: 20px;
+                width:60%;
+                height: 100vh;
+                position: absolute;
+                top:47px;
+                right:calc(0% - 20px);
+                background-color: $color-white;
+                display: none;
+                cursor: pointer;
+                .m_hdr_menu {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 35px;
+                    .hdr_etc {
+                        font-size: $font-18;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        .hdr_ect_right {
+                            position: relative;
+                            &::after {
+                                content: "";
+                                display: block;
+                                width: 1px; 
+                                height: 14px !important;
+                                position: absolute;
+                                top:0; left: 45%;
+                                background: rgba($color: #ffffff, $alpha: 0.5);
+                            }
+                        } 
+                        
+            
+                    }
+                    .m_mypage {
+                        padding: 0 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        >p {
+                            gap:5px;
+                            display: flex;
+                            align-items: center;
+                            font-size:$font-18 ;
+                        }
+                        span {
+                            font-size:$font-18 ;
+                        }
+                    }
+                    .nav_wrap {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+            
+                        .none_box {
+                            width: 92px;
+                            height: 25px;
+                        }
+                                    .m_nav {
+                                        display: none;
+                                        cursor: pointer;
+                        
+                                        .main_menu_wrap {
+                                            >.main_menu:nth-child(-n + 4) {
+                                                &:hover>p::after {
+                                                    opacity: 1;
+                                                    transform: translate(-50%, -50%) scaleX(1);
+                                                }
+                                            }
+                                        }
+                        
+                                        .main_menu_wrap {
+                                            position: relative;
+            
+                        
+                                            .main_menu {
+                                                /* &:hover > p::after {
+                                                    opacity: 1;
+                                                    transform: translate(-50%,-50%) scaleX(1);
+                                                } */
+                                                padding: 20px 20px;
+                                                display: flex;
+                                                flex-flow: column nowrap;
+                        
+                                                >p {
+                                                    position: relative;
+                                                    /* &::after {
+                                                        transform-origin: left;  
+                                                        transition: transform 0.2s ease;
+                                                        transform: translate(-50%,-50%) scaleX(0);
+                                                        opacity: 0;
+                                                        width: 110%; height: 2px;
+                                                        content: ""; position: absolute;
+                                                        bottom:-31px; left: 50%;
+                                                        background-color: #212121;
+                                                    } */
+                                                    color: #212121;
+                                                    font-weight: 500;
+                                                }
+                        
+                                                .sub_menu_all {
+                                                    display: none;
+                                                    @include check1;
+                                                    border-top: 1px solid rgba(229, 229, 229, 0.6);
+                                                    transition: opacity 0.2s ease, visibility 0.2s ease;
+                                                    /*                             opacity: 0;
+                                                    visibility: hidden; */
+                                                    
+                                                    background-color: #fff;
+                        
+                                                    /* position: absolute;
+                                                    top:76px; left:50%; */
+                                                    .sub_menu_wrap {
+                                                        width: fit-content;
+                        
+                                                        .sub_menu {
+                                                            cursor: pointer;
+                        
+                                                            /* display: flex;
+                                                            gap: 40px; */
+                                                            p {
+                                                                font-weight: $font-sb;
+                                                                margin-bottom: 20px;
+                                                            }
+                        
+                                                            .sub_menu_detail {
+                                                                @include check1;
+                                                                display: none;
+                        
+                                                                height: fit-content;
+                        
+                                                                li {
+                                                                    margin-bottom: 20px;
+                                                                    color: #666;
+                                                                }
+                        
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                        
+                                            .pc_nav .main_menu:nth-of-type(1):hover>.sub_menu_all,
+                                            .pc_nav .main_menu:nth-of-type(2):hover>.sub_menu_all,
+                                            .pc_nav .main_menu:nth-of-type(3):hover>.sub_menu_all,
+                                            .pc_nav .main_menu:nth-of-type(4):hover>.sub_menu_all {
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                        
+                                    }
+                        .pc_nav {
+                            cursor: pointer;
+                            .main_menu_wrap {
+                > .main_menu:nth-child(-n + 4) {
+                    &:hover > p::after {
+                        opacity: 1;
+                        transform: translate(-50%, -50%) scaleX(1);
+                    }
+                }
+            }
+                            .main_menu_wrap {
+                                position: relative;
+                                display: flex;
+                                gap:30px;
+                                .main_menu {
+                                    /* &:hover > p::after {
+                                        opacity: 1;
+                                        transform: translate(-50%,-50%) scaleX(1);
+                                    } */
+                                    padding: 30px 10px ;
+                                    display: flex;
+                                    flex-flow: column nowrap;
+                                    >p {
+                                        position: relative;
+                                        &::after {
+                                            transform-origin: left;  
+                                            transition: transform 0.2s ease;
+                                            transform: translate(-50%,-50%) scaleX(0);
+                                            opacity: 0;
+                                            width: 110%; height: 2px;
+                                            content: ""; position: absolute;
+                                            bottom:-31px; left: 50%;
+                                            background-color: #212121;
+                                        }
+                                    color: #fff;
+                                    font-weight: 500;
+                                    }
+                                    .sub_menu_all {
+                                        border-top: 1px solid rgba(229, 229, 229, 0.6);
+                                        transition:  opacity 0.2s ease, visibility 0.2s ease;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transform: translateX(-50%);
+                                        width: 350%;
+                                        padding: 40px 120px 50px 120px;
+                                        background-color: #fff;
+                                        position: absolute;
+                                        top:76px; left:50%;
+                                        .sub_menu_wrap {
+                                            margin: 0 auto;
+                                            display: flex;
+                                            gap:120px;
+                                            width: fit-content;
+                                            .sub_menu {
+                                                cursor: pointer;
+                                                /* display: flex;
+                                                gap: 40px; */
+                                                p {
+                                                    font-weight: $font-sb;
+                                                    margin-bottom: 20px;
+                                                }
+                                                
+                                                .sub_menu_detail {
+                                                    
+                                                    height: fit-content;
+                                                    
+                                                    li {
+                                                        margin-bottom: 20px;
+                                                        color:#666;
+                                                    }
+                                                    li:hover {
+                                                        color:$color-gray-1;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .main_menu:nth-of-type(1):hover > .sub_menu_all, 
+                                .main_menu:nth-of-type(2):hover > .sub_menu_all ,
+                                .main_menu:nth-of-type(3):hover > .sub_menu_all, 
+                                .main_menu:nth-of-type(4):hover > .sub_menu_all 
+                                {opacity: 1; visibility: visible;}
+                            }
+                            
+                        }
+            
+                        .hdr_serv {
+                            cursor: pointer;
+                            display: flex;
+                            gap: 20px;
+                            .m_menu {
+                                display: none;
+                            }
+                            li {
+                                img {}
+                            }
+                        }
+                        
+                        /* .sub_menu_all .sub_menu_wrap:not(:first-child) {
+                        display: none; 
+                        } */
+                        
+                    }
+                    .hdr_ect_left {
+                        padding-left: 20px;
+                        display: flex;
+                        flex-flow: column;
+                        gap:20px;
+                        p {
+                            font-weight: $font-m;
+                            font-size: $font-14;
+                            color:$color-gray-2;
+                        }
+                    }
+                }
+                .main_menu_wrap {
+                    >.main_menu:nth-child(-n + 4) {
+                        &:hover>p::after {
+                            opacity: 1;
+                            transform: translate(-50%, -50%) scaleX(1);
+                        }
+                    }
+                }
 
-            nav {
+                .main_menu_wrap {
+                    position: relative;
+
+
+                    .main_menu {
+                        /* &:hover > p::after {
+                            opacity: 1;
+                            transform: translate(-50%,-50%) scaleX(1);
+                        } */
+                        padding: 20px 20px;
+                        display: flex;
+                        flex-flow: column nowrap;
+
+                        >p {
+                            position: relative;
+                            /* &::after {
+                                transform-origin: left;  
+                                transition: transform 0.2s ease;
+                                transform: translate(-50%,-50%) scaleX(0);
+                                opacity: 0;
+                                width: 110%; height: 2px;
+                                content: ""; position: absolute;
+                                bottom:-31px; left: 50%;
+                                background-color: #212121;
+                            } */
+                            color: #212121;
+                            font-weight: 500;
+                        }
+
+                        .sub_menu_all {
+                            display: none;
+                            @include check1;
+                            border-top: 1px solid rgba(229, 229, 229, 0.6);
+                            transition: opacity 0.2s ease, visibility 0.2s ease;
+                            /*                             opacity: 0;
+                            visibility: hidden; */
+                            
+                            background-color: #fff;
+
+                            /* position: absolute;
+                            top:76px; left:50%; */
+                            .sub_menu_wrap {
+                                width: fit-content;
+
+                                .sub_menu {
+                                    cursor: pointer;
+
+                                    /* display: flex;
+                                    gap: 40px; */
+                                    p {
+                                        font-weight: $font-sb;
+                                        margin-bottom: 20px;
+                                    }
+
+                                    .sub_menu_detail {
+                                        @include check1;
+                                        display: none;
+
+                                        height: fit-content;
+
+                                        li {
+                                            margin-bottom: 20px;
+                                            color: #666;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .pc_nav .main_menu:nth-of-type(1):hover>.sub_menu_all,
+                    .pc_nav .main_menu:nth-of-type(2):hover>.sub_menu_all,
+                    .pc_nav .main_menu:nth-of-type(3):hover>.sub_menu_all,
+                    .pc_nav .main_menu:nth-of-type(4):hover>.sub_menu_all {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+            }
+            .pc_nav {
                 cursor: pointer;
                 .main_menu_wrap {
     > .main_menu:nth-child(-n + 4) {
@@ -178,7 +534,9 @@ header {
                 cursor: pointer;
                 display: flex;
                 gap: 20px;
-
+                .m_menu {
+                    display: none;
+                }
                 li {
                     img {}
                 }
@@ -211,7 +569,7 @@ header:hover {
             stroke: #212121;
         }
 
-        .hdr_menu {
+        .pc_hdr_menu {
             .hdr_etc .hdr_ect_left p {color:#212121;}
             .hdr_etc .hdr_ect_right p {color:#212121;}
 
@@ -219,15 +577,15 @@ header:hover {
                 /* nav .main_menu_wrap li {
                     color: #212121;
                 } */
-                nav .main_menu_wrap .main_menu:nth-child(1)>p,
-                nav .main_menu_wrap .main_menu:nth-child(2)>p,
-                nav .main_menu_wrap .main_menu:nth-child(3)>p,
-                nav .main_menu_wrap .main_menu:nth-child(4)>p {color: #212121 !important;}
-                nav .main_menu_wrap .main_menu:nth-child(5)>p {
+                .pc_nav .main_menu_wrap .main_menu:nth-child(1)>p,
+                .pc_nav .main_menu_wrap .main_menu:nth-child(2)>p,
+                .pc_nav .main_menu_wrap .main_menu:nth-child(3)>p,
+                .pc_nav .main_menu_wrap .main_menu:nth-child(4)>p {color: #212121 !important;}
+                .pc_nav .main_menu_wrap .main_menu:nth-child(5)>p {
                     color: #FF6600 !important;
                 }
 
-                nav .main_menu_wrap .main_menu:nth-child(6)>p{
+                .pc_nav .main_menu_wrap .main_menu:nth-child(6)>p{
                     color: #FFBD24 !important;
                 }
             }
@@ -264,14 +622,14 @@ header.active {
     .hdr_serv li svg path {
         stroke: #212121;
     }
-    .hdr_menu { 
+    .pc_hdr_menu { 
         p {color:#212121;}
         .hdr_etc {display: none;} 
         .nav_wrap{
             align-items: center;
-            nav .main_menu_wrap li p {color:#212121;}
-            nav .main_menu_wrap .main_menu:nth-child(5)>p{color:#FF6600;}
-            nav .main_menu_wrap .main_menu:nth-child(6)>p {color:#FFBD24;}
+            .pc_nav .main_menu_wrap li p {color:#212121;}
+            .pc_nav .main_menu_wrap .main_menu:nth-child(5)>p{color:#FF6600;}
+            .pc_nav .main_menu_wrap .main_menu:nth-child(6)>p {color:#FFBD24;}
         }
         .hdr_ect_right {
             &::after {
@@ -899,7 +1257,10 @@ main {
 
                 .cate_btn_wrap {
                     display: flex;
-                    gap: 15px;
+                    .cate_all{
+                        display: flex;
+                        gap: 15px;
+                    }
 
                     .cate_btn {
                         font-size: $font-18;
@@ -2009,9 +2370,11 @@ main {
             width: 100%;
 
             ul {
-                display: flex;
-                gap: 15px;
-
+                display: grid;
+                grid-template-columns: repeat(5, 1fr); /* 2열 */
+                gap: 20px; /* 카드 사이 간격 */
+                width: 100%;    
+                /* grid-auto-rows: auto; */
                 li {
                     cursor: pointer;
                     .insta_frame {
@@ -2025,10 +2388,6 @@ main {
                         width: 100%;
                     }
                 }
-            }
-
-            ul:last-child {
-                margin-top: 15px;
             }
 
             .if1 {
