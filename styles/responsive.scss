@@ -210,9 +210,13 @@
                         gap:15px;
                     }
                     .m_nav {
-                        transform: translateX(0);
+                        display: block;
+                        transition: translateX 0.2s ease;
+                        transform: translateX(0%);
+                    }
+                    .m_nav.active {
                         
-                        /* display: block; */
+                        transform: translateX(120%);
                     }
                     .pc_nav {
                         display: none;

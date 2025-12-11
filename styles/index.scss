@@ -87,14 +87,15 @@ header {
                 height: 25px;
             }
             .m_nav {
+                display: none;
                 padding-top: 20px;
                 width:60%;
                 height: 100vh;
                 position: absolute;
-                top:47px;
+                top:45px;
                 right:calc(0% - 20px);
+                transform: translateX(0%);
                 background-color: $color-white;
-                display: none;
                 cursor: pointer;
                 .m_hdr_menu {
                     display: flex;
@@ -143,100 +144,6 @@ header {
                             width: 92px;
                             height: 25px;
                         }
-                                    .m_nav {
-                                        display: none;
-                                        cursor: pointer;
-                        
-                                        .main_menu_wrap {
-                                            >.main_menu:nth-child(-n + 4) {
-                                                &:hover>p::after {
-                                                    opacity: 1;
-                                                    transform: translate(-50%, -50%) scaleX(1);
-                                                }
-                                            }
-                                        }
-                        
-                                        .main_menu_wrap {
-                                            position: relative;
-            
-                        
-                                            .main_menu {
-                                                /* &:hover > p::after {
-                                                    opacity: 1;
-                                                    transform: translate(-50%,-50%) scaleX(1);
-                                                } */
-                                                padding: 20px 20px;
-                                                display: flex;
-                                                flex-flow: column nowrap;
-                        
-                                                >p {
-                                                    position: relative;
-                                                    /* &::after {
-                                                        transform-origin: left;  
-                                                        transition: transform 0.2s ease;
-                                                        transform: translate(-50%,-50%) scaleX(0);
-                                                        opacity: 0;
-                                                        width: 110%; height: 2px;
-                                                        content: ""; position: absolute;
-                                                        bottom:-31px; left: 50%;
-                                                        background-color: #212121;
-                                                    } */
-                                                    color: #212121;
-                                                    font-weight: 500;
-                                                }
-                        
-                                                .sub_menu_all {
-                                                    display: none;
-                                                    @include check1;
-                                                    border-top: 1px solid rgba(229, 229, 229, 0.6);
-                                                    transition: opacity 0.2s ease, visibility 0.2s ease;
-                                                    /*                             opacity: 0;
-                                                    visibility: hidden; */
-                                                    
-                                                    background-color: #fff;
-                        
-                                                    /* position: absolute;
-                                                    top:76px; left:50%; */
-                                                    .sub_menu_wrap {
-                                                        width: fit-content;
-                        
-                                                        .sub_menu {
-                                                            cursor: pointer;
-                        
-                                                            /* display: flex;
-                                                            gap: 40px; */
-                                                            p {
-                                                                font-weight: $font-sb;
-                                                                margin-bottom: 20px;
-                                                            }
-                        
-                                                            .sub_menu_detail {
-                                                                @include check1;
-                                                                display: none;
-                        
-                                                                height: fit-content;
-                        
-                                                                li {
-                                                                    margin-bottom: 20px;
-                                                                    color: #666;
-                                                                }
-                        
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                        
-                                            .pc_nav .main_menu:nth-of-type(1):hover>.sub_menu_all,
-                                            .pc_nav .main_menu:nth-of-type(2):hover>.sub_menu_all,
-                                            .pc_nav .main_menu:nth-of-type(3):hover>.sub_menu_all,
-                                            .pc_nav .main_menu:nth-of-type(4):hover>.sub_menu_all {
-                                                opacity: 1;
-                                                visibility: visible;
-                                            }
-                                        }
-                        
-                                    }
                         .pc_nav {
                             cursor: pointer;
                             .main_menu_wrap {
@@ -247,82 +154,82 @@ header {
                     }
                 }
             }
-                            .main_menu_wrap {
-                                position: relative;
-                                display: flex;
-                                gap:30px;
-                                .main_menu {
-                                    /* &:hover > p::after {
-                                        opacity: 1;
-                                        transform: translate(-50%,-50%) scaleX(1);
-                                    } */
-                                    padding: 30px 10px ;
-                                    display: flex;
-                                    flex-flow: column nowrap;
-                                    >p {
-                                        position: relative;
-                                        &::after {
-                                            transform-origin: left;  
-                                            transition: transform 0.2s ease;
-                                            transform: translate(-50%,-50%) scaleX(0);
-                                            opacity: 0;
-                                            width: 110%; height: 2px;
-                                            content: ""; position: absolute;
-                                            bottom:-31px; left: 50%;
-                                            background-color: #212121;
-                                        }
-                                    color: #fff;
-                                    font-weight: 500;
+            .main_menu_wrap {
+                position: relative;
+                display: flex;
+                gap:30px;
+                .main_menu {
+                    /* &:hover > p::after {
+                        opacity: 1;
+                        transform: translate(-50%,-50%) scaleX(1);
+                    } */
+                    padding: 30px 10px ;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    >p {
+                        position: relative;
+                        &::after {
+                            transform-origin: left;  
+                            transition: transform 0.2s ease;
+                            transform: translate(-50%,-50%) scaleX(0);
+                            opacity: 0;
+                            width: 110%; height: 2px;
+                            content: ""; position: absolute;
+                            bottom:-31px; left: 50%;
+                            background-color: #212121;
+                        }
+                    color: #fff;
+                    font-weight: 500;
+                    }
+                    .sub_menu_all {
+                        border-top: 1px solid rgba(229, 229, 229, 0.6);
+                        transition:  opacity 0.2s ease, visibility 0.2s ease;
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateX(-50%);
+                        width: 350%;
+                        padding: 40px 120px 50px 120px;
+                        background-color: #fff;
+                        position: absolute;
+                        top:76px; left:50%;
+                        .sub_menu_wrap {
+                            margin: 0 auto;
+                            display: flex;
+                            gap:120px;
+                            width: fit-content;
+                            .sub_menu {
+                                cursor: pointer;
+                                /* display: flex;
+                                gap: 40px; */
+                                p {
+                                    font-weight: $font-sb;
+                                    margin-bottom: 20px;
+                                }
+                                
+                                .sub_menu_detail {
+                                    
+                                    height: fit-content;
+                                    
+                                    li {
+                                        margin-bottom: 20px;
+                                        color:#666;
                                     }
-                                    .sub_menu_all {
-                                        border-top: 1px solid rgba(229, 229, 229, 0.6);
-                                        transition:  opacity 0.2s ease, visibility 0.2s ease;
-                                        opacity: 0;
-                                        visibility: hidden;
-                                        transform: translateX(-50%);
-                                        width: 350%;
-                                        padding: 40px 120px 50px 120px;
-                                        background-color: #fff;
-                                        position: absolute;
-                                        top:76px; left:50%;
-                                        .sub_menu_wrap {
-                                            margin: 0 auto;
-                                            display: flex;
-                                            gap:120px;
-                                            width: fit-content;
-                                            .sub_menu {
-                                                cursor: pointer;
-                                                /* display: flex;
-                                                gap: 40px; */
-                                                p {
-                                                    font-weight: $font-sb;
-                                                    margin-bottom: 20px;
-                                                }
-                                                
-                                                .sub_menu_detail {
-                                                    
-                                                    height: fit-content;
-                                                    
-                                                    li {
-                                                        margin-bottom: 20px;
-                                                        color:#666;
-                                                    }
-                                                    li:hover {
-                                                        color:$color-gray-1;
-                                                    }
-                                                }
-                                            }
-                                        }
+                                    li:hover {
+                                        color:$color-gray-1;
                                     }
                                 }
-                                .main_menu:nth-of-type(1):hover > .sub_menu_all, 
-                                .main_menu:nth-of-type(2):hover > .sub_menu_all ,
-                                .main_menu:nth-of-type(3):hover > .sub_menu_all, 
-                                .main_menu:nth-of-type(4):hover > .sub_menu_all 
-                                {opacity: 1; visibility: visible;}
                             }
-                            
                         }
+                    }
+                }
+                .main_menu:nth-of-type(1):hover > .sub_menu_all, 
+                .main_menu:nth-of-type(2):hover > .sub_menu_all ,
+                .main_menu:nth-of-type(3):hover > .sub_menu_all, 
+                .main_menu:nth-of-type(4):hover > .sub_menu_all 
+                {opacity: 1; visibility: visible;}
+            }
+                            
+            }
             
                         .hdr_serv {
                             cursor: pointer;
@@ -376,6 +283,8 @@ header {
                         flex-flow: column nowrap;
 
                         >p {
+                            display: flex;
+                            justify-content: space-between;
                             position: relative;
                             /* &::after {
                                 transform-origin: left;  
@@ -390,36 +299,37 @@ header {
                             color: #212121;
                             font-weight: 500;
                         }
-
+                        .sub_menu_all.active {
+                            display: block;
+                        } 
                         .sub_menu_all {
                             display: none;
-                            @include check1;
-                            border-top: 1px solid rgba(229, 229, 229, 0.6);
-                            transition: opacity 0.2s ease, visibility 0.2s ease;
-                            /*                             opacity: 0;
-                            visibility: hidden; */
+                            margin-top: 20px;
                             
+                            /* height: 0;
+                            visibility: hidden; */
                             background-color: #fff;
-
-                            /* position: absolute;
-                            top:76px; left:50%; */
                             .sub_menu_wrap {
-                                width: fit-content;
-
+                                padding: 0 13px 0 8px;
                                 .sub_menu {
                                     cursor: pointer;
 
                                     /* display: flex;
                                     gap: 40px; */
                                     p {
+                                        width: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
                                         font-weight: $font-sb;
                                         margin-bottom: 20px;
                                     }
-
+                                    .sub_menu_detail.active {
+                                        display: block;
+                                    }
                                     .sub_menu_detail {
-                                        @include check1;
+                                        padding: 0 13px 0 8px;
                                         display: none;
-
                                         height: fit-content;
 
                                         li {

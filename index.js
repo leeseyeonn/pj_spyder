@@ -321,6 +321,11 @@ const row8List = new Swiper('#big_punch_list', {
 /* ------------------------------- 헤더 컨트롤 */
 
 const header = document.querySelector("header");
+const mMenu = document.querySelectorAll('header .pc_hdr_menu .nav_wrap .m_nav .main_menu_wrap .main_menu > p img')
+const subMenuAll = document.querySelectorAll('header .pc_hdr_menu .nav_wrap .m_nav .main_menu_wrap .main_menu .sub_menu_all')
+
+
+
 
 function checkScroll() {
     if (window.scrollY > 300) {
@@ -334,19 +339,63 @@ window.addEventListener("scroll", checkScroll);
 window.addEventListener("load", checkScroll);
 
 
+mMenu.forEach(mMenuBtn => {
+  mMenuBtn.addEventListener('click', () => {
+    const parentMain = mMenuBtn.closest('.main_menu');
+    const mySub = parentMain ? parentMain.querySelector('.sub_menu_all') : null;
+    if (!mySub) return;
+
+    // 나 말고 다른 서브메뉴는 닫기
+    subMenuAll.forEach(el => {
+      if (el !== mySub) el.classList.remove('active');
+    });
+
+    // 내 것만 토글
+    mySub.classList.toggle('active');
+  });
+});
+
+
+const subMenuDetailBtn = document.querySelectorAll(
+  'header .pc_hdr_menu .nav_wrap .m_nav .main_menu_wrap .main_menu .sub_menu_all .sub_menu_wrap .sub_menu p img'
+);
+const subMenuDetail = document.querySelectorAll(
+  'header .pc_hdr_menu .nav_wrap .m_nav .main_menu_wrap .main_menu .sub_menu_all .sub_menu_wrap .sub_menu .sub_menu_detail'
+);
+
+
+console.log(subMenuDetailBtn)
+
+
+subMenuDetailBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const parentSub = btn.closest('.sub_menu'); // 자신의 상위 sub_menu
+    const myDetail = parentSub ? parentSub.querySelector('.sub_menu_detail_wrap') : null;
+    if (!myDetail) return;
+
+    // 나 말고 다른 상세는 닫기
+    subMenuDetailWrap.forEach(el => {
+      if (el !== myDetail) el.classList.remove('active');
+    });
+
+    // 내 것만 토글
+    myDetail.classList.toggle('active');
+  });
+});
 
 
 
 
+const mHam = document.querySelector('header .pc_hdr_menu .nav_wrap .hdr_serv .m_menu')
+const mNav = document.querySelector('header .header_bg_warp .pc_hdr_menu .nav_wrap .m_nav')
 
+console.log(mHam, mNav)
 
+mNav.classList.add('active')
 
-
-
-
-
-
-
+mHam.addEventListener('click',()=>{
+    mNav.classList.toggle('active')
+})
 
 
 
@@ -542,5 +591,7 @@ insBtn.addEventListener('click', () => {
         insBtn.textContent = "더보기";
     }
 });
+
+
 
 
